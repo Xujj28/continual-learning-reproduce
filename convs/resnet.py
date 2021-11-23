@@ -4,6 +4,7 @@ https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
 '''
 import torch
 import torch.nn as nn
+from torch.nn import functional as F
 from torchvision.models.utils import load_state_dict_from_url
 
 
@@ -125,7 +126,7 @@ class ResNet(nn.Module):
 
     def __init__(self, block, layers, num_classes=1000, zero_init_residual=False,
                  groups=1, width_per_group=64, replace_stride_with_dilation=None,
-                 norm_layer=None):
+                 norm_layer=None, norm=False):
         super(ResNet, self).__init__()
         if norm_layer is None:
             norm_layer = nn.BatchNorm2d
@@ -133,6 +134,7 @@ class ResNet(nn.Module):
 
         self.inplanes = 64
         self.dilation = 1
+        self.norm = norm
         if replace_stride_with_dilation is None:
             # each element in the tuple indicates if we should replace
             # the 2x2 stride with a dilated convolution instead
@@ -213,6 +215,8 @@ class ResNet(nn.Module):
 
         pooled = self.avgpool(x_4)  # [bs, 512, 1, 1]
         features = torch.flatten(pooled, 1)  # [bs, 512]
+        if self.norm:
+            features = F.normalize(features)
         # x = self.fc(x)
 
         return {

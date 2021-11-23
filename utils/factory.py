@@ -5,6 +5,7 @@ from models.ucir import UCIR
 from models.bic import BiC
 from models.lwm import LwM
 from models.podnet import PODNet
+from models.e_ewc_sdc import E_EWC_SDC
 
 
 def get_model(model_name, args):
@@ -23,3 +24,7 @@ def get_model(model_name, args):
         return LwM(args)
     elif name == 'podnet':
         return PODNet(args)
+    elif name == 'e_ewc_sdc':
+        return E_EWC_SDC(args)
+    elif name == 'e_mas_sdc':
+        return E_EWC_SDC(args)

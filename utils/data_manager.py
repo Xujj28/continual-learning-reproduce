@@ -3,12 +3,15 @@ import numpy as np
 from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
-from utils.data import iCIFAR10, iCIFAR100, iImageNet1000
+from utils.data import iCIFAR10, iCIFAR100, iImageNet1000, iImageNet100_inverse
 
 
 class DataManager(object):
-    def __init__(self, dataset_name, shuffle, seed, init_cls, increment):
+    def __init__(self, dataset_name, shuffle, seed, init_cls, increment, train_dir=None, test_dir=None, train_inverse_dir=None):
         self.dataset_name = dataset_name
+        self._train_dir = train_dir
+        self._test_dir = test_dir
+        self._train_inverse_dir = train_inverse_dir
         self._setup_data(dataset_name, shuffle, seed)
         assert init_cls <= len(self._class_order), 'No enough classes.'
         self._increments = [init_cls]
@@ -30,6 +33,8 @@ class DataManager(object):
             x, y = self._train_data, self._train_targets
         elif source == 'test':
             x, y = self._test_data, self._test_targets
+        elif source == 'train_inverse':
+            x, y = self._train_inverse_data, self._train_inverse_targets
         else:
             raise ValueError('Unknown data source {}.'.format(source))
 
@@ -65,6 +70,8 @@ class DataManager(object):
             x, y = self._train_data, self._train_targets
         elif source == 'test':
             x, y = self._test_data, self._test_targets
+        elif source == 'train_inverse':
+            x, y = self._train_inverse_data, self._train_inverse_targets
         else:
             raise ValueError('Unknown data source {}.'.format(source))
 
@@ -106,11 +113,16 @@ class DataManager(object):
 
     def _setup_data(self, dataset_name, shuffle, seed):
         idata = _get_idata(dataset_name)
-        idata.download_data()
+        if self._train_dir is not None:
+            idata.download_data(self._train_dir, self._test_dir, self._train_inverse_dir)
+        else:
+            idata.download_data()
 
         # Data
         self._train_data, self._train_targets = idata.train_data, idata.train_targets
         self._test_data, self._test_targets = idata.test_data, idata.test_targets
+        if self._train_dir is not None:
+            self._train_inverse_data, self._train_inverse_targets = idata.train_inverse_data, idata.train_inverse_targets
         self.use_path = idata.use_path
 
         # Transforms
@@ -131,6 +143,8 @@ class DataManager(object):
         # Map indices
         self._train_targets = _map_new_class_index(self._train_targets, self._class_order)
         self._test_targets = _map_new_class_index(self._test_targets, self._class_order)
+        if self._train_dir is not None:
+            self._train_inverse_targets = _map_new_class_index(self._train_inverse_targets, self._class_order)
 
     def _select(self, x, y, low_range, high_range):
         idxes = np.where(np.logical_and(y >= low_range, y < high_range))[0]
@@ -170,6 +184,8 @@ def _get_idata(dataset_name):
         return iCIFAR100()
     elif name == 'imagenet1000':
         return iImageNet1000()
+    elif name == 'imagenet_inverse':
+        return iImageNet100_inverse()
     else:
         raise NotImplementedError('Unknown dataset {}.'.format(dataset_name))
 

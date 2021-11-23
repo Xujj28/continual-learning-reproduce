@@ -1,0 +1,228 @@
+2021-11-05 17:27:41,375 [trainer.py] => config: ./config.json
+2021-11-05 17:27:41,375 [trainer.py] => prefix: reproduce
+2021-11-05 17:27:41,375 [trainer.py] => dataset: cifar100
+2021-11-05 17:27:41,375 [trainer.py] => memory_size: 2000
+2021-11-05 17:27:41,375 [trainer.py] => memory_per_class: 20
+2021-11-05 17:27:41,375 [trainer.py] => fixed_memory: True
+2021-11-05 17:27:41,375 [trainer.py] => shuffle: True
+2021-11-05 17:27:41,375 [trainer.py] => init_cls: 50
+2021-11-05 17:27:41,375 [trainer.py] => increment: 10
+2021-11-05 17:27:41,375 [trainer.py] => model_name: E_EWC_SDC
+2021-11-05 17:27:41,375 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-05 17:27:41,375 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-05 17:27:41,376 [trainer.py] => seed: 30
+2021-11-05 17:27:41,376 [trainer.py] => tradeoff: 10000000.0
+2021-11-05 17:27:41,376 [trainer.py] => num_instances: 8
+2021-11-05 17:27:41,376 [trainer.py] => sigma: 0.2
+2021-11-05 17:27:41,376 [trainer.py] => Embed_dim: 512
+2021-11-05 17:27:42,553 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-05 17:27:42,927 [trainer.py] => All params: 499729
+2021-11-05 17:27:42,927 [trainer.py] => Trainable params: 499729
+2021-11-05 17:27:42,927 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-05 17:29:13,422 [trainer.py] => config: ./config.json
+2021-11-05 17:29:13,422 [trainer.py] => prefix: reproduce
+2021-11-05 17:29:13,422 [trainer.py] => dataset: cifar100
+2021-11-05 17:29:13,422 [trainer.py] => memory_size: 2000
+2021-11-05 17:29:13,422 [trainer.py] => memory_per_class: 20
+2021-11-05 17:29:13,422 [trainer.py] => fixed_memory: True
+2021-11-05 17:29:13,422 [trainer.py] => shuffle: True
+2021-11-05 17:29:13,422 [trainer.py] => init_cls: 50
+2021-11-05 17:29:13,423 [trainer.py] => increment: 10
+2021-11-05 17:29:13,423 [trainer.py] => model_name: E_EWC_SDC
+2021-11-05 17:29:13,423 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-05 17:29:13,423 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-05 17:29:13,423 [trainer.py] => seed: 30
+2021-11-05 17:29:13,423 [trainer.py] => tradeoff: 10000000.0
+2021-11-05 17:29:13,423 [trainer.py] => num_instances: 8
+2021-11-05 17:29:13,423 [trainer.py] => sigma: 0.2
+2021-11-05 17:29:13,423 [trainer.py] => Embed_dim: 512
+2021-11-05 17:29:14,575 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-05 17:29:14,935 [trainer.py] => All params: 499729
+2021-11-05 17:29:14,936 [trainer.py] => Trainable params: 499729
+2021-11-05 17:29:14,936 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-05 17:29:43,766 [e_ewc_sdc.py] => Task 0, Epoch 1/10 => Loss 0.858, Loss_aug 0.000000, Train_accy 6.89, Pos-Dist 1.745384, Neg-Dist 1.928395,
+2021-11-05 17:30:13,994 [e_ewc_sdc.py] => Task 0, Epoch 2/10 => Loss 0.452, Loss_aug 0.000000, Train_accy 6.91, Pos-Dist 1.302367, Neg-Dist 1.844726,
+2021-11-05 17:30:44,501 [e_ewc_sdc.py] => Task 0, Epoch 3/10 => Loss 0.314, Loss_aug 0.000000, Train_accy 6.89, Pos-Dist 1.140159, Neg-Dist 1.784611,
+2021-11-05 17:31:15,235 [e_ewc_sdc.py] => Task 0, Epoch 4/10 => Loss 0.264, Loss_aug 0.000000, Train_accy 6.87, Pos-Dist 1.071019, Neg-Dist 1.739823,
+2021-11-05 17:31:45,323 [e_ewc_sdc.py] => Task 0, Epoch 5/10 => Loss 0.239, Loss_aug 0.000000, Train_accy 6.85, Pos-Dist 1.034555, Neg-Dist 1.703823,
+2021-11-08 16:07:55,671 [trainer.py] => config: ./config.json
+2021-11-08 16:07:55,672 [trainer.py] => prefix: reproduce
+2021-11-08 16:07:55,672 [trainer.py] => dataset: cifar100
+2021-11-08 16:07:55,672 [trainer.py] => memory_size: 2000
+2021-11-08 16:07:55,672 [trainer.py] => memory_per_class: 20
+2021-11-08 16:07:55,672 [trainer.py] => fixed_memory: True
+2021-11-08 16:07:55,672 [trainer.py] => shuffle: True
+2021-11-08 16:07:55,672 [trainer.py] => init_cls: 50
+2021-11-08 16:07:55,672 [trainer.py] => increment: 10
+2021-11-08 16:07:55,673 [trainer.py] => model_name: E_EWC_SDC
+2021-11-08 16:07:55,673 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-08 16:07:55,673 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-08 16:07:55,673 [trainer.py] => seed: 30
+2021-11-08 16:07:55,673 [trainer.py] => tradeoff: 10000000.0
+2021-11-08 16:07:55,673 [trainer.py] => num_instances: 8
+2021-11-08 16:07:55,673 [trainer.py] => sigma: 0.2
+2021-11-08 16:07:55,673 [trainer.py] => Embed_dim: 512
+2021-11-08 16:07:56,850 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-08 16:07:57,243 [trainer.py] => All params: 499729
+2021-11-08 16:07:57,244 [trainer.py] => Trainable params: 499729
+2021-11-08 16:07:57,244 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-08 16:08:50,723 [e_ewc_sdc.py] => Task 0, Epoch 1/10 => Loss 0.865, Loss_aug 0.000000, Train_accy 6.88, Pos-Dist 1.755612, Neg-Dist 1.923341,
+2021-11-08 16:09:44,455 [e_ewc_sdc.py] => Task 0, Epoch 2/10 => Loss 0.447, Loss_aug 0.000000, Train_accy 6.92, Pos-Dist 1.298011, Neg-Dist 1.845000,
+2021-11-08 16:10:38,785 [e_ewc_sdc.py] => Task 0, Epoch 3/10 => Loss 0.315, Loss_aug 0.000000, Train_accy 6.89, Pos-Dist 1.140322, Neg-Dist 1.780114,
+2021-11-08 16:11:34,251 [e_ewc_sdc.py] => Task 0, Epoch 4/10 => Loss 0.262, Loss_aug 0.000000, Train_accy 6.87, Pos-Dist 1.069955, Neg-Dist 1.737439,
+2021-11-08 16:12:29,465 [e_ewc_sdc.py] => Task 0, Epoch 5/10 => Loss 0.239, Loss_aug 0.000000, Train_accy 6.82, Pos-Dist 1.034792, Neg-Dist 1.701618,
+2021-11-08 16:13:21,357 [trainer.py] => config: ./config.json
+2021-11-08 16:13:21,357 [trainer.py] => prefix: reproduce
+2021-11-08 16:13:21,357 [trainer.py] => dataset: cifar100
+2021-11-08 16:13:21,357 [trainer.py] => memory_size: 2000
+2021-11-08 16:13:21,358 [trainer.py] => memory_per_class: 20
+2021-11-08 16:13:21,358 [trainer.py] => fixed_memory: True
+2021-11-08 16:13:21,358 [trainer.py] => shuffle: True
+2021-11-08 16:13:21,358 [trainer.py] => init_cls: 50
+2021-11-08 16:13:21,358 [trainer.py] => increment: 10
+2021-11-08 16:13:21,358 [trainer.py] => model_name: E_EWC_SDC
+2021-11-08 16:13:21,358 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-08 16:13:21,358 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-08 16:13:21,358 [trainer.py] => seed: 30
+2021-11-08 16:13:21,358 [trainer.py] => tradeoff: 10000000.0
+2021-11-08 16:13:21,358 [trainer.py] => num_instances: 8
+2021-11-08 16:13:21,358 [trainer.py] => sigma: 0.2
+2021-11-08 16:13:21,358 [trainer.py] => Embed_dim: 512
+2021-11-08 16:13:22,538 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-08 16:14:29,761 [trainer.py] => config: ./config.json
+2021-11-08 16:14:29,761 [trainer.py] => prefix: reproduce
+2021-11-08 16:14:29,761 [trainer.py] => dataset: cifar100
+2021-11-08 16:14:29,761 [trainer.py] => memory_size: 2000
+2021-11-08 16:14:29,761 [trainer.py] => memory_per_class: 20
+2021-11-08 16:14:29,762 [trainer.py] => fixed_memory: True
+2021-11-08 16:14:29,762 [trainer.py] => shuffle: True
+2021-11-08 16:14:29,762 [trainer.py] => init_cls: 50
+2021-11-08 16:14:29,762 [trainer.py] => increment: 10
+2021-11-08 16:14:29,762 [trainer.py] => model_name: E_EWC_SDC
+2021-11-08 16:14:29,762 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-08 16:14:29,762 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-08 16:14:29,762 [trainer.py] => seed: 30
+2021-11-08 16:14:29,762 [trainer.py] => tradeoff: 10000000.0
+2021-11-08 16:14:29,762 [trainer.py] => num_instances: 8
+2021-11-08 16:14:29,762 [trainer.py] => sigma: 0.2
+2021-11-08 16:14:29,762 [trainer.py] => Embed_dim: 512
+2021-11-08 16:14:30,929 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-08 16:14:32,392 [trainer.py] => All params: 499729
+2021-11-08 16:14:32,392 [trainer.py] => Trainable params: 499729
+2021-11-08 16:14:32,392 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-08 16:20:14,908 [trainer.py] => config: ./config.json
+2021-11-08 16:20:14,908 [trainer.py] => prefix: reproduce
+2021-11-08 16:20:14,908 [trainer.py] => dataset: cifar100
+2021-11-08 16:20:14,908 [trainer.py] => memory_size: 2000
+2021-11-08 16:20:14,908 [trainer.py] => memory_per_class: 20
+2021-11-08 16:20:14,908 [trainer.py] => fixed_memory: True
+2021-11-08 16:20:14,908 [trainer.py] => shuffle: True
+2021-11-08 16:20:14,908 [trainer.py] => init_cls: 50
+2021-11-08 16:20:14,908 [trainer.py] => increment: 10
+2021-11-08 16:20:14,908 [trainer.py] => model_name: E_EWC_SDC
+2021-11-08 16:20:14,908 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-08 16:20:14,908 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-08 16:20:14,908 [trainer.py] => seed: 30
+2021-11-08 16:20:14,909 [trainer.py] => tradeoff: 10000000.0
+2021-11-08 16:20:14,909 [trainer.py] => num_instances: 8
+2021-11-08 16:20:14,909 [trainer.py] => sigma: 0.2
+2021-11-08 16:20:14,909 [trainer.py] => Embed_dim: 512
+2021-11-08 16:20:16,072 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-08 16:20:17,531 [trainer.py] => All params: 499729
+2021-11-08 16:20:17,531 [trainer.py] => Trainable params: 499729
+2021-11-08 16:20:17,531 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-08 16:20:25,351 [e_ewc_sdc.py] => Task 0, Epoch 1/10 => Loss 0.295, Loss_aug 0.000000, Train_accy 72.50, Pos-Dist 10.836434, Neg-Dist 14.756952,
+2021-11-08 16:20:28,414 [e_ewc_sdc.py] => Task 0, Epoch 2/10 => Loss 0.272, Loss_aug 0.000000, Train_accy 72.88, Pos-Dist 10.745629, Neg-Dist 14.974820,
+2021-11-08 16:20:32,284 [e_ewc_sdc.py] => Task 0, Epoch 3/10 => Loss 0.252, Loss_aug 0.000000, Train_accy 72.25, Pos-Dist 10.779770, Neg-Dist 14.661164,
+2021-11-08 16:20:35,499 [e_ewc_sdc.py] => Task 0, Epoch 4/10 => Loss 0.241, Loss_aug 0.000000, Train_accy 73.25, Pos-Dist 10.776258, Neg-Dist 14.727718,
+2021-11-08 16:20:39,346 [e_ewc_sdc.py] => Task 0, Epoch 5/10 => Loss 0.302, Loss_aug 0.000000, Train_accy 71.59, Pos-Dist 10.871009, Neg-Dist 14.701642,
+2021-11-08 16:20:42,451 [e_ewc_sdc.py] => Task 0, Epoch 6/10 => Loss 0.295, Loss_aug 0.000000, Train_accy 71.88, Pos-Dist 10.832512, Neg-Dist 14.573267,
+2021-11-08 16:20:46,271 [e_ewc_sdc.py] => Task 0, Epoch 7/10 => Loss 0.223, Loss_aug 0.000000, Train_accy 72.94, Pos-Dist 10.755916, Neg-Dist 14.697382,
+2021-11-08 16:20:49,371 [e_ewc_sdc.py] => Task 0, Epoch 8/10 => Loss 0.292, Loss_aug 0.000000, Train_accy 71.50, Pos-Dist 10.881339, Neg-Dist 14.716311,
+2021-11-08 16:20:53,291 [e_ewc_sdc.py] => Task 0, Epoch 9/10 => Loss 0.267, Loss_aug 0.000000, Train_accy 72.44, Pos-Dist 10.719860, Neg-Dist 14.691404,
+2021-11-08 16:20:56,466 [e_ewc_sdc.py] => Task 0, Epoch 10/10 => Loss 0.302, Loss_aug 0.000000, Train_accy 70.53, Pos-Dist 10.831760, Neg-Dist 14.588597,
+2021-11-08 16:20:56,713 [base.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-08 16:31:21,224 [trainer.py] => config: ./config.json
+2021-11-08 16:31:21,224 [trainer.py] => prefix: reproduce
+2021-11-08 16:31:21,224 [trainer.py] => dataset: cifar100
+2021-11-08 16:31:21,224 [trainer.py] => memory_size: 2000
+2021-11-08 16:31:21,224 [trainer.py] => memory_per_class: 20
+2021-11-08 16:31:21,224 [trainer.py] => fixed_memory: True
+2021-11-08 16:31:21,224 [trainer.py] => shuffle: True
+2021-11-08 16:31:21,224 [trainer.py] => init_cls: 50
+2021-11-08 16:31:21,224 [trainer.py] => increment: 10
+2021-11-08 16:31:21,224 [trainer.py] => model_name: E_EWC_SDC
+2021-11-08 16:31:21,224 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-08 16:31:21,224 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-08 16:31:21,224 [trainer.py] => seed: 30
+2021-11-08 16:31:21,224 [trainer.py] => tradeoff: 10000000.0
+2021-11-08 16:31:21,224 [trainer.py] => num_instances: 8
+2021-11-08 16:31:21,225 [trainer.py] => sigma: 0.2
+2021-11-08 16:31:21,225 [trainer.py] => Embed_dim: 512
+2021-11-08 16:31:22,394 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-08 16:31:23,854 [trainer.py] => All params: 499729
+2021-11-08 16:31:23,854 [trainer.py] => Trainable params: 499729
+2021-11-08 16:31:23,854 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-08 16:31:31,825 [e_ewc_sdc.py] => Task 0, Epoch 1/2 => Loss 0.295, Loss_aug 0.000000, Train_accy 72.50, Pos-Dist 10.836434, Neg-Dist 14.756952,
+2021-11-08 16:31:35,943 [e_ewc_sdc.py] => Task 0, Epoch 2/2 => Loss 0.272, Loss_aug 0.000000, Train_accy 72.88, Pos-Dist 10.745629, Neg-Dist 14.974820,
+2021-11-08 16:31:36,194 [base.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-08 16:31:46,549 [e_ewc_sdc.py] => Exemplar size: 1000
+2021-11-08 16:31:46,550 [trainer.py] => No CNN accuracy.
+2021-11-08 16:31:46,550 [trainer.py] => NME: {'total': 54.92, '00-09': 62.3, '10-19': 65.1, '20-29': 51.1, '30-39': 50.9, '40-49': 45.2, 'old': 0, 'new': 54.92}
+2021-11-08 16:31:46,550 [trainer.py] => NME top1 curve: [54.92]
+2021-11-08 16:31:46,550 [trainer.py] => NME top5 curve: [84.06]
+
+2021-11-08 16:31:46,550 [trainer.py] => All params: 499729
+2021-11-08 16:31:46,550 [trainer.py] => Trainable params: 499729
+2021-11-08 16:31:46,550 [e_ewc_sdc.py] => Learning on 50-60
+2021-11-08 16:31:48,265 [e_ewc_sdc.py] => Task 1, Epoch 1/2 => Loss 0.234, Loss_aug 0.000009, Train_accy 72.81, Pos-Dist 10.976852, Neg-Dist 14.918935,
+2021-11-08 16:31:49,342 [e_ewc_sdc.py] => Task 1, Epoch 2/2 => Loss 0.402, Loss_aug 0.000445, Train_accy 67.97, Pos-Dist 11.054037, Neg-Dist 14.058368,
+2021-11-08 16:31:49,566 [base.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-08 16:31:59,059 [e_ewc_sdc.py] => Exemplar size: 1200
+2021-11-08 16:31:59,059 [trainer.py] => No CNN accuracy.
+2021-11-08 16:31:59,059 [trainer.py] => NME: {'total': 51.35, '00-09': 61.7, '10-19': 61.8, '20-29': 48.9, '30-39': 46.7, '40-49': 42.1, '50-59': 46.9, 'old': 52.24, 'new': 46.9}
+2021-11-08 16:31:59,059 [trainer.py] => Calibrated NME: {'total': 12.4, '00-09': 0.0, '10-19': 0.0, '20-29': 0.0, '30-39': 0.0, '40-49': 0.0, '50-59': 74.4, 'old': 0.0, 'new': 74.4}
+2021-11-08 16:31:59,059 [trainer.py] => NME top1 curve: [54.92, 51.35]
+2021-11-08 16:31:59,059 [trainer.py] => NME top5 curve: [84.06, 80.62]
+
+2021-11-08 16:31:59,059 [trainer.py] => Calibrated NME top1 curve: [12.4]
+2021-11-08 16:31:59,059 [trainer.py] => Calibrated NME top5 curve: [16.18]
+
+2021-11-08 16:31:59,060 [trainer.py] => All params: 499729
+2021-11-08 16:31:59,060 [trainer.py] => Trainable params: 499729
+2021-11-08 16:31:59,060 [e_ewc_sdc.py] => Learning on 60-70
+2021-11-08 16:32:00,821 [e_ewc_sdc.py] => Task 2, Epoch 1/2 => Loss 0.184, Loss_aug 0.000028, Train_accy 74.22, Pos-Dist 10.735478, Neg-Dist 14.376457,
+2021-11-08 16:32:01,951 [e_ewc_sdc.py] => Task 2, Epoch 2/2 => Loss 0.192, Loss_aug 0.000096, Train_accy 72.81, Pos-Dist 10.642432, Neg-Dist 14.365462,
+2021-11-08 16:32:02,173 [base.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-08 16:32:12,792 [e_ewc_sdc.py] => Exemplar size: 1400
+2021-11-08 16:32:12,792 [trainer.py] => No CNN accuracy.
+2021-11-08 16:32:12,792 [trainer.py] => NME: {'total': 50.96, '00-09': 59.9, '10-19': 58.9, '20-29': 47.3, '30-39': 45.4, '40-49': 39.6, '50-59': 46.3, '60-69': 59.3, 'old': 49.57, 'new': 59.3}
+2021-11-08 16:32:12,792 [trainer.py] => Calibrated NME: {'total': 11.6, '00-09': 0.0, '10-19': 0.0, '20-29': 0.0, '30-39': 0.0, '40-49': 0.0, '50-59': 0.0, '60-69': 81.2, 'old': 0.0, 'new': 81.2}
+2021-11-08 16:32:12,792 [trainer.py] => NME top1 curve: [54.92, 51.35, 50.96]
+2021-11-08 16:32:12,792 [trainer.py] => NME top5 curve: [84.06, 80.62, 79.74]
+
+2021-11-08 16:32:12,792 [trainer.py] => Calibrated NME top1 curve: [12.4, 11.6]
+2021-11-08 16:32:12,792 [trainer.py] => Calibrated NME top5 curve: [16.18, 14.09]
+
+2021-11-08 16:32:12,793 [trainer.py] => All params: 499729
+2021-11-08 16:32:12,793 [trainer.py] => Trainable params: 499729
+2021-11-08 16:32:12,793 [e_ewc_sdc.py] => Learning on 70-80
+2021-11-08 16:32:14,539 [e_ewc_sdc.py] => Task 3, Epoch 1/2 => Loss 0.201, Loss_aug 0.000037, Train_accy 74.53, Pos-Dist 10.860709, Neg-Dist 14.582082,
+2021-11-08 16:32:15,735 [e_ewc_sdc.py] => Task 3, Epoch 2/2 => Loss 0.151, Loss_aug 0.000165, Train_accy 78.59, Pos-Dist 10.720840, Neg-Dist 15.125187,
+2021-11-08 16:32:15,990 [base.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-08 16:32:27,820 [e_ewc_sdc.py] => Exemplar size: 1600
+2021-11-08 16:32:27,820 [trainer.py] => No CNN accuracy.
+2021-11-08 16:32:27,820 [trainer.py] => NME: {'total': 50.11, '00-09': 59.9, '10-19': 57.7, '20-29': 45.4, '30-39': 42.1, '40-49': 38.0, '50-59': 44.2, '60-69': 59.2, '70-79': 54.4, 'old': 49.5, 'new': 54.4}
+2021-11-08 16:32:27,820 [trainer.py] => Calibrated NME: {'total': 10.48, '00-09': 0.0, '10-19': 0.0, '20-29': 0.0, '30-39': 0.0, '40-49': 0.0, '50-59': 0.0, '60-69': 0.0, '70-79': 83.8, 'old': 0.0, 'new': 83.8}
+2021-11-08 16:32:27,820 [trainer.py] => NME top1 curve: [54.92, 51.35, 50.96, 50.11]
+2021-11-08 16:32:27,820 [trainer.py] => NME top5 curve: [84.06, 80.62, 79.74, 78.49]
+
+2021-11-08 16:32:27,820 [trainer.py] => Calibrated NME top1 curve: [12.4, 11.6, 10.48]
+2021-11-08 16:32:27,820 [trainer.py] => Calibrated NME top5 curve: [16.18, 14.09, 12.36]
+
+2021-11-08 16:32:27,821 [trainer.py] => All params: 499729
+2021-11-08 16:32:27,821 [trainer.py] => Trainable params: 499729
+2021-11-08 16:32:27,821 [e_ewc_sdc.py] => Learning on 80-90
+2021-11-08 16:32:29,553 [e_ewc_sdc.py] => Task 4, Epoch 1/2 => Loss 0.244, Loss_aug 0.000038, Train_accy 71.41, Pos-Dist 11.067454, Neg-Dist 14.692874,
+2021-11-08 16:32:30,727 [e_ewc_sdc.py] => Task 4, Epoch 2/2 => Loss 0.311, Loss_aug 0.000244, Train_accy 69.22, Pos-Dist 10.838180, Neg-Dist 14.564798,
+2021-11-08 16:32:30,957 [base.py] => Constructing exemplars for new classes...(20 per classes)

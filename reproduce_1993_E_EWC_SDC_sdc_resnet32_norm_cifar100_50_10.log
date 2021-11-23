@@ -1,0 +1,466 @@
+2021-11-10 22:14:43,180 [trainer.py] => config: ./config.json
+2021-11-10 22:14:43,180 [trainer.py] => prefix: reproduce
+2021-11-10 22:14:43,180 [trainer.py] => dataset: cifar100
+2021-11-10 22:14:43,180 [trainer.py] => memory_size: 2000
+2021-11-10 22:14:43,180 [trainer.py] => memory_per_class: 20
+2021-11-10 22:14:43,180 [trainer.py] => fixed_memory: True
+2021-11-10 22:14:43,180 [trainer.py] => shuffle: True
+2021-11-10 22:14:43,180 [trainer.py] => init_cls: 50
+2021-11-10 22:14:43,180 [trainer.py] => increment: 10
+2021-11-10 22:14:43,181 [trainer.py] => model_name: E_EWC_SDC
+2021-11-10 22:14:43,181 [trainer.py] => convnet_type: sdc_resnet32_norm
+2021-11-10 22:14:43,181 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-10 22:14:43,181 [trainer.py] => seed: 1993
+2021-11-10 22:14:43,181 [trainer.py] => tradeoff: 10000000.0
+2021-11-10 22:14:43,181 [trainer.py] => num_instances: 8
+2021-11-10 22:14:43,181 [trainer.py] => sigma: 0.2
+2021-11-10 22:14:43,181 [trainer.py] => Embed_dim: 512
+2021-11-10 22:14:43,181 [trainer.py] => loss: tripletloss_no_hardmining
+2021-11-10 22:14:43,181 [trainer.py] => pretrained: True
+2021-11-10 22:14:44,351 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2021-11-10 22:14:45,804 [trainer.py] => All params: 499729
+2021-11-10 22:14:45,804 [trainer.py] => Trainable params: 499729
+2021-11-10 22:14:45,804 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-10 22:14:51,009 [e_ewc_sdc.py] => Task 0, Epoch 1/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 81.80, Pos-Dist 0.589881, Neg-Dist 0.882008,
+2021-11-10 22:14:54,096 [e_ewc_sdc.py] => Task 0, Epoch 2/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 81.48, Pos-Dist 0.587295, Neg-Dist 0.875260,
+2021-11-10 22:14:57,223 [e_ewc_sdc.py] => Task 0, Epoch 3/51 => Loss 0.002, Loss_aug 0.000000, Train_accy 83.76, Pos-Dist 0.586036, Neg-Dist 0.892652,
+2021-11-10 22:15:00,347 [e_ewc_sdc.py] => Task 0, Epoch 4/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.98, Pos-Dist 0.581044, Neg-Dist 0.875646,
+2021-11-10 22:15:03,740 [e_ewc_sdc.py] => Task 0, Epoch 5/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 81.80, Pos-Dist 0.599801, Neg-Dist 0.888007,
+2021-11-10 22:15:06,977 [e_ewc_sdc.py] => Task 0, Epoch 6/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.53, Pos-Dist 0.585334, Neg-Dist 0.890979,
+2021-11-10 22:15:10,125 [e_ewc_sdc.py] => Task 0, Epoch 7/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.62, Pos-Dist 0.588197, Neg-Dist 0.889567,
+2021-11-10 22:15:13,349 [e_ewc_sdc.py] => Task 0, Epoch 8/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.11, Pos-Dist 0.582911, Neg-Dist 0.880935,
+2021-11-10 22:15:16,589 [e_ewc_sdc.py] => Task 0, Epoch 9/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.68, Pos-Dist 0.586033, Neg-Dist 0.871311,
+2021-11-10 22:15:19,773 [e_ewc_sdc.py] => Task 0, Epoch 10/51 => Loss 0.002, Loss_aug 0.000000, Train_accy 84.02, Pos-Dist 0.578953, Neg-Dist 0.896843,
+2021-11-10 22:15:22,967 [e_ewc_sdc.py] => Task 0, Epoch 11/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.76, Pos-Dist 0.574648, Neg-Dist 0.883987,
+2021-11-10 22:15:26,107 [e_ewc_sdc.py] => Task 0, Epoch 12/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.55, Pos-Dist 0.586795, Neg-Dist 0.876863,
+2021-11-10 22:15:29,136 [e_ewc_sdc.py] => Task 0, Epoch 13/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.07, Pos-Dist 0.584188, Neg-Dist 0.884110,
+2021-11-10 22:15:32,154 [e_ewc_sdc.py] => Task 0, Epoch 14/51 => Loss 0.002, Loss_aug 0.000000, Train_accy 83.85, Pos-Dist 0.583745, Neg-Dist 0.899881,
+2021-11-10 22:15:35,186 [e_ewc_sdc.py] => Task 0, Epoch 15/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.85, Pos-Dist 0.593102, Neg-Dist 0.878668,
+2021-11-10 22:15:38,255 [e_ewc_sdc.py] => Task 0, Epoch 16/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.56, Pos-Dist 0.588513, Neg-Dist 0.891830,
+2021-11-10 22:15:41,305 [e_ewc_sdc.py] => Task 0, Epoch 17/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 81.15, Pos-Dist 0.587458, Neg-Dist 0.878745,
+2021-11-10 22:15:44,408 [e_ewc_sdc.py] => Task 0, Epoch 18/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.49, Pos-Dist 0.587375, Neg-Dist 0.885149,
+2021-11-10 22:15:47,570 [e_ewc_sdc.py] => Task 0, Epoch 19/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.42, Pos-Dist 0.585913, Neg-Dist 0.881531,
+2021-11-10 22:15:50,646 [e_ewc_sdc.py] => Task 0, Epoch 20/51 => Loss 0.005, Loss_aug 0.000000, Train_accy 81.67, Pos-Dist 0.586363, Neg-Dist 0.891679,
+2021-11-10 22:15:53,674 [e_ewc_sdc.py] => Task 0, Epoch 21/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.71, Pos-Dist 0.580453, Neg-Dist 0.880120,
+2021-11-10 22:15:56,709 [e_ewc_sdc.py] => Task 0, Epoch 22/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.13, Pos-Dist 0.592921, Neg-Dist 0.880528,
+2021-11-10 22:15:59,751 [e_ewc_sdc.py] => Task 0, Epoch 23/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.75, Pos-Dist 0.585555, Neg-Dist 0.873412,
+2021-11-10 22:16:02,773 [e_ewc_sdc.py] => Task 0, Epoch 24/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.29, Pos-Dist 0.590945, Neg-Dist 0.880411,
+2021-11-10 22:16:05,776 [e_ewc_sdc.py] => Task 0, Epoch 25/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 81.18, Pos-Dist 0.589702, Neg-Dist 0.878330,
+2021-11-10 22:16:08,803 [e_ewc_sdc.py] => Task 0, Epoch 26/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.40, Pos-Dist 0.585005, Neg-Dist 0.882369,
+2021-11-10 22:16:11,830 [e_ewc_sdc.py] => Task 0, Epoch 27/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.01, Pos-Dist 0.583789, Neg-Dist 0.889974,
+2021-11-10 22:16:14,817 [e_ewc_sdc.py] => Task 0, Epoch 28/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.88, Pos-Dist 0.582774, Neg-Dist 0.877325,
+2021-11-10 22:16:17,827 [e_ewc_sdc.py] => Task 0, Epoch 29/51 => Loss 0.006, Loss_aug 0.000000, Train_accy 80.11, Pos-Dist 0.594194, Neg-Dist 0.871970,
+2021-11-10 22:16:20,851 [e_ewc_sdc.py] => Task 0, Epoch 30/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 81.93, Pos-Dist 0.588674, Neg-Dist 0.878591,
+2021-11-10 22:16:23,883 [e_ewc_sdc.py] => Task 0, Epoch 31/51 => Loss 0.005, Loss_aug 0.000000, Train_accy 81.25, Pos-Dist 0.587463, Neg-Dist 0.883364,
+2021-11-10 22:16:26,892 [e_ewc_sdc.py] => Task 0, Epoch 32/51 => Loss 0.002, Loss_aug 0.000000, Train_accy 83.79, Pos-Dist 0.583086, Neg-Dist 0.898223,
+2021-11-10 22:16:29,900 [e_ewc_sdc.py] => Task 0, Epoch 33/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.00, Pos-Dist 0.586588, Neg-Dist 0.861838,
+2021-11-10 22:16:32,888 [e_ewc_sdc.py] => Task 0, Epoch 34/51 => Loss 0.002, Loss_aug 0.000000, Train_accy 83.69, Pos-Dist 0.586216, Neg-Dist 0.883329,
+2021-11-10 22:16:35,899 [e_ewc_sdc.py] => Task 0, Epoch 35/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.10, Pos-Dist 0.591558, Neg-Dist 0.885370,
+2021-11-10 22:16:38,879 [e_ewc_sdc.py] => Task 0, Epoch 36/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.36, Pos-Dist 0.586554, Neg-Dist 0.876621,
+2021-11-10 22:16:41,905 [e_ewc_sdc.py] => Task 0, Epoch 37/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.04, Pos-Dist 0.588222, Neg-Dist 0.884646,
+2021-11-10 22:16:44,920 [e_ewc_sdc.py] => Task 0, Epoch 38/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.68, Pos-Dist 0.591867, Neg-Dist 0.894708,
+2021-11-10 22:16:47,962 [e_ewc_sdc.py] => Task 0, Epoch 39/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 81.64, Pos-Dist 0.590094, Neg-Dist 0.881928,
+2021-11-10 22:16:51,009 [e_ewc_sdc.py] => Task 0, Epoch 40/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.62, Pos-Dist 0.584314, Neg-Dist 0.880375,
+2021-11-10 22:16:54,043 [e_ewc_sdc.py] => Task 0, Epoch 41/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.30, Pos-Dist 0.585124, Neg-Dist 0.888550,
+2021-11-10 22:16:57,067 [e_ewc_sdc.py] => Task 0, Epoch 42/51 => Loss 0.002, Loss_aug 0.000000, Train_accy 83.46, Pos-Dist 0.582167, Neg-Dist 0.883092,
+2021-11-10 22:17:00,091 [e_ewc_sdc.py] => Task 0, Epoch 43/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.46, Pos-Dist 0.584694, Neg-Dist 0.889792,
+2021-11-10 22:17:03,128 [e_ewc_sdc.py] => Task 0, Epoch 44/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.32, Pos-Dist 0.586458, Neg-Dist 0.885237,
+2021-11-10 22:17:06,155 [e_ewc_sdc.py] => Task 0, Epoch 45/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 83.14, Pos-Dist 0.581991, Neg-Dist 0.893218,
+2021-11-10 22:17:09,175 [e_ewc_sdc.py] => Task 0, Epoch 46/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.91, Pos-Dist 0.588461, Neg-Dist 0.882596,
+2021-11-10 22:17:12,208 [e_ewc_sdc.py] => Task 0, Epoch 47/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.88, Pos-Dist 0.581469, Neg-Dist 0.883815,
+2021-11-10 22:17:15,240 [e_ewc_sdc.py] => Task 0, Epoch 48/51 => Loss 0.003, Loss_aug 0.000000, Train_accy 82.71, Pos-Dist 0.583379, Neg-Dist 0.885457,
+2021-11-10 22:17:18,277 [e_ewc_sdc.py] => Task 0, Epoch 49/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.62, Pos-Dist 0.584479, Neg-Dist 0.874671,
+2021-11-10 22:17:21,327 [e_ewc_sdc.py] => Task 0, Epoch 50/51 => Loss 0.004, Loss_aug 0.000000, Train_accy 82.32, Pos-Dist 0.584625, Neg-Dist 0.875043,
+2021-11-10 22:17:24,364 [e_ewc_sdc.py] => Task 0, Epoch 51/51 => Loss 0.005, Loss_aug 0.000000, Train_accy 81.05, Pos-Dist 0.591141, Neg-Dist 0.860027,
+2021-11-10 22:17:25,862 [e_ewc_sdc.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-10 22:17:34,513 [e_ewc_sdc.py] => Exemplar size: 1000
+2021-11-10 22:17:34,513 [trainer.py] => No CNN accuracy.
+2021-11-10 22:17:34,513 [trainer.py] => NME: {'total': 72.18, '00-09': 74.8, '10-19': 63.9, '20-29': 77.4, '30-39': 68.6, '40-49': 76.2, 'old': 0, 'new': 72.18}
+2021-11-10 22:17:34,513 [trainer.py] => NME top1 curve: [72.18]
+2021-11-10 22:17:34,513 [trainer.py] => NME top5 curve: [92.54]
+
+2021-11-10 22:17:34,513 [trainer.py] => All params: 499729
+2021-11-10 22:17:34,514 [trainer.py] => Trainable params: 499729
+2021-11-10 22:17:34,514 [e_ewc_sdc.py] => Learning on 50-60
+2021-11-10 22:17:37,418 [e_ewc_sdc.py] => Task 1, Epoch 1/51 => Loss 0.006, Loss_aug 0.000000, Train_accy 80.00, Pos-Dist 0.587991, Neg-Dist 0.856032,
+2021-11-10 22:17:41,476 [e_ewc_sdc.py] => Task 1, Epoch 2/51 => Loss 0.005, Loss_aug 0.000002, Train_accy 80.91, Pos-Dist 0.580799, Neg-Dist 0.862199,
+2021-11-10 22:17:45,543 [e_ewc_sdc.py] => Task 1, Epoch 3/51 => Loss 0.005, Loss_aug 0.000003, Train_accy 81.04, Pos-Dist 0.581172, Neg-Dist 0.867503,
+2021-11-10 22:17:49,630 [e_ewc_sdc.py] => Task 1, Epoch 4/51 => Loss 0.005, Loss_aug 0.000004, Train_accy 81.43, Pos-Dist 0.576903, Neg-Dist 0.852093,
+2021-11-10 22:17:53,699 [e_ewc_sdc.py] => Task 1, Epoch 5/51 => Loss 0.004, Loss_aug 0.000007, Train_accy 82.14, Pos-Dist 0.577591, Neg-Dist 0.871004,
+2021-11-10 22:17:57,800 [e_ewc_sdc.py] => Task 1, Epoch 6/51 => Loss 0.005, Loss_aug 0.000008, Train_accy 80.65, Pos-Dist 0.575926, Neg-Dist 0.859564,
+2021-11-10 22:18:01,877 [e_ewc_sdc.py] => Task 1, Epoch 7/51 => Loss 0.004, Loss_aug 0.000011, Train_accy 81.88, Pos-Dist 0.576686, Neg-Dist 0.864835,
+2021-11-10 22:18:05,913 [e_ewc_sdc.py] => Task 1, Epoch 8/51 => Loss 0.004, Loss_aug 0.000007, Train_accy 81.51, Pos-Dist 0.585932, Neg-Dist 0.865166,
+2021-11-10 22:18:09,931 [e_ewc_sdc.py] => Task 1, Epoch 9/51 => Loss 0.005, Loss_aug 0.000012, Train_accy 80.00, Pos-Dist 0.584337, Neg-Dist 0.863300,
+2021-11-10 22:18:13,968 [e_ewc_sdc.py] => Task 1, Epoch 10/51 => Loss 0.004, Loss_aug 0.000018, Train_accy 81.15, Pos-Dist 0.581044, Neg-Dist 0.865057,
+2021-11-10 22:18:18,054 [e_ewc_sdc.py] => Task 1, Epoch 11/51 => Loss 0.005, Loss_aug 0.000012, Train_accy 80.49, Pos-Dist 0.580929, Neg-Dist 0.863477,
+2021-11-10 22:18:22,144 [e_ewc_sdc.py] => Task 1, Epoch 12/51 => Loss 0.005, Loss_aug 0.000013, Train_accy 81.07, Pos-Dist 0.582773, Neg-Dist 0.859514,
+2021-11-10 22:18:26,225 [e_ewc_sdc.py] => Task 1, Epoch 13/51 => Loss 0.004, Loss_aug 0.000019, Train_accy 81.74, Pos-Dist 0.575119, Neg-Dist 0.871369,
+2021-11-10 22:18:30,328 [e_ewc_sdc.py] => Task 1, Epoch 14/51 => Loss 0.004, Loss_aug 0.000022, Train_accy 81.85, Pos-Dist 0.576883, Neg-Dist 0.859495,
+2021-11-10 22:18:34,416 [e_ewc_sdc.py] => Task 1, Epoch 15/51 => Loss 0.006, Loss_aug 0.000025, Train_accy 79.90, Pos-Dist 0.586621, Neg-Dist 0.868562,
+2021-11-10 22:18:38,497 [e_ewc_sdc.py] => Task 1, Epoch 16/51 => Loss 0.006, Loss_aug 0.000033, Train_accy 80.08, Pos-Dist 0.581162, Neg-Dist 0.851672,
+2021-11-10 22:18:42,584 [e_ewc_sdc.py] => Task 1, Epoch 17/51 => Loss 0.004, Loss_aug 0.000038, Train_accy 82.27, Pos-Dist 0.571104, Neg-Dist 0.869226,
+2021-11-10 22:18:46,678 [e_ewc_sdc.py] => Task 1, Epoch 18/51 => Loss 0.004, Loss_aug 0.000039, Train_accy 81.46, Pos-Dist 0.581035, Neg-Dist 0.867361,
+2021-11-10 22:18:50,762 [e_ewc_sdc.py] => Task 1, Epoch 19/51 => Loss 0.005, Loss_aug 0.000051, Train_accy 81.09, Pos-Dist 0.582505, Neg-Dist 0.865500,
+2021-11-10 22:18:54,823 [e_ewc_sdc.py] => Task 1, Epoch 20/51 => Loss 0.007, Loss_aug 0.000042, Train_accy 79.58, Pos-Dist 0.579071, Neg-Dist 0.854837,
+2021-11-10 22:18:58,931 [e_ewc_sdc.py] => Task 1, Epoch 21/51 => Loss 0.004, Loss_aug 0.000041, Train_accy 81.12, Pos-Dist 0.578427, Neg-Dist 0.857099,
+2021-11-10 22:19:03,009 [e_ewc_sdc.py] => Task 1, Epoch 22/51 => Loss 0.004, Loss_aug 0.000065, Train_accy 82.34, Pos-Dist 0.582316, Neg-Dist 0.865319,
+2021-11-10 22:19:07,073 [e_ewc_sdc.py] => Task 1, Epoch 23/51 => Loss 0.005, Loss_aug 0.000043, Train_accy 80.62, Pos-Dist 0.574745, Neg-Dist 0.868219,
+2021-11-10 22:19:11,109 [e_ewc_sdc.py] => Task 1, Epoch 24/51 => Loss 0.005, Loss_aug 0.000053, Train_accy 81.09, Pos-Dist 0.578761, Neg-Dist 0.859762,
+2021-11-10 22:19:15,149 [e_ewc_sdc.py] => Task 1, Epoch 25/51 => Loss 0.006, Loss_aug 0.000074, Train_accy 80.91, Pos-Dist 0.575461, Neg-Dist 0.864739,
+2021-11-10 22:19:19,216 [e_ewc_sdc.py] => Task 1, Epoch 26/51 => Loss 0.004, Loss_aug 0.000077, Train_accy 83.10, Pos-Dist 0.570841, Neg-Dist 0.875300,
+2021-11-10 22:19:23,275 [e_ewc_sdc.py] => Task 1, Epoch 27/51 => Loss 0.005, Loss_aug 0.000058, Train_accy 81.38, Pos-Dist 0.578116, Neg-Dist 0.864512,
+2021-11-10 22:19:27,343 [e_ewc_sdc.py] => Task 1, Epoch 28/51 => Loss 0.005, Loss_aug 0.000117, Train_accy 80.78, Pos-Dist 0.581298, Neg-Dist 0.858738,
+2021-11-10 22:19:31,394 [e_ewc_sdc.py] => Task 1, Epoch 29/51 => Loss 0.005, Loss_aug 0.000102, Train_accy 81.43, Pos-Dist 0.579411, Neg-Dist 0.871412,
+2021-11-10 22:19:35,455 [e_ewc_sdc.py] => Task 1, Epoch 30/51 => Loss 0.005, Loss_aug 0.000111, Train_accy 81.09, Pos-Dist 0.583169, Neg-Dist 0.858637,
+2021-11-10 22:19:39,484 [e_ewc_sdc.py] => Task 1, Epoch 31/51 => Loss 0.004, Loss_aug 0.000103, Train_accy 81.67, Pos-Dist 0.579144, Neg-Dist 0.856752,
+2021-11-10 22:19:43,511 [e_ewc_sdc.py] => Task 1, Epoch 32/51 => Loss 0.005, Loss_aug 0.000119, Train_accy 81.04, Pos-Dist 0.589104, Neg-Dist 0.863843,
+2021-11-10 22:19:47,570 [e_ewc_sdc.py] => Task 1, Epoch 33/51 => Loss 0.006, Loss_aug 0.000105, Train_accy 79.95, Pos-Dist 0.581914, Neg-Dist 0.851636,
+2021-11-10 22:19:51,604 [e_ewc_sdc.py] => Task 1, Epoch 34/51 => Loss 0.005, Loss_aug 0.000106, Train_accy 81.74, Pos-Dist 0.578915, Neg-Dist 0.859806,
+2021-11-10 22:19:55,637 [e_ewc_sdc.py] => Task 1, Epoch 35/51 => Loss 0.004, Loss_aug 0.000105, Train_accy 81.74, Pos-Dist 0.580183, Neg-Dist 0.868845,
+2021-11-10 22:19:59,682 [e_ewc_sdc.py] => Task 1, Epoch 36/51 => Loss 0.005, Loss_aug 0.000120, Train_accy 80.96, Pos-Dist 0.578805, Neg-Dist 0.861141,
+2021-11-10 22:20:03,698 [e_ewc_sdc.py] => Task 1, Epoch 37/51 => Loss 0.006, Loss_aug 0.000124, Train_accy 80.89, Pos-Dist 0.581694, Neg-Dist 0.856975,
+2021-11-10 22:20:07,722 [e_ewc_sdc.py] => Task 1, Epoch 38/51 => Loss 0.005, Loss_aug 0.000160, Train_accy 81.59, Pos-Dist 0.573570, Neg-Dist 0.864381,
+2021-11-10 22:20:11,783 [e_ewc_sdc.py] => Task 1, Epoch 39/51 => Loss 0.004, Loss_aug 0.000133, Train_accy 82.24, Pos-Dist 0.574964, Neg-Dist 0.864786,
+2021-11-10 22:20:15,818 [e_ewc_sdc.py] => Task 1, Epoch 40/51 => Loss 0.004, Loss_aug 0.000164, Train_accy 81.82, Pos-Dist 0.576201, Neg-Dist 0.862139,
+2021-11-10 22:20:19,855 [e_ewc_sdc.py] => Task 1, Epoch 41/51 => Loss 0.005, Loss_aug 0.000106, Train_accy 81.15, Pos-Dist 0.582259, Neg-Dist 0.866681,
+2021-11-10 22:20:23,890 [e_ewc_sdc.py] => Task 1, Epoch 42/51 => Loss 0.005, Loss_aug 0.000164, Train_accy 81.20, Pos-Dist 0.581390, Neg-Dist 0.863571,
+2021-11-10 22:20:27,944 [e_ewc_sdc.py] => Task 1, Epoch 43/51 => Loss 0.004, Loss_aug 0.000148, Train_accy 81.41, Pos-Dist 0.578170, Neg-Dist 0.868369,
+2021-11-10 22:20:31,966 [e_ewc_sdc.py] => Task 1, Epoch 44/51 => Loss 0.004, Loss_aug 0.000166, Train_accy 80.96, Pos-Dist 0.583756, Neg-Dist 0.862634,
+2021-11-10 22:20:36,013 [e_ewc_sdc.py] => Task 1, Epoch 45/51 => Loss 0.006, Loss_aug 0.000151, Train_accy 79.77, Pos-Dist 0.587403, Neg-Dist 0.851765,
+2021-11-10 22:20:40,084 [e_ewc_sdc.py] => Task 1, Epoch 46/51 => Loss 0.008, Loss_aug 0.000164, Train_accy 78.59, Pos-Dist 0.585366, Neg-Dist 0.846596,
+2021-11-10 22:20:44,141 [e_ewc_sdc.py] => Task 1, Epoch 47/51 => Loss 0.006, Loss_aug 0.000182, Train_accy 81.07, Pos-Dist 0.576284, Neg-Dist 0.855338,
+2021-11-10 22:20:48,202 [e_ewc_sdc.py] => Task 1, Epoch 48/51 => Loss 0.005, Loss_aug 0.000108, Train_accy 80.73, Pos-Dist 0.583914, Neg-Dist 0.864489,
+2021-11-10 22:20:52,291 [e_ewc_sdc.py] => Task 1, Epoch 49/51 => Loss 0.006, Loss_aug 0.000198, Train_accy 80.16, Pos-Dist 0.586980, Neg-Dist 0.861451,
+2021-11-10 22:20:56,366 [e_ewc_sdc.py] => Task 1, Epoch 50/51 => Loss 0.004, Loss_aug 0.000132, Train_accy 81.22, Pos-Dist 0.580335, Neg-Dist 0.860732,
+2021-11-10 22:21:00,424 [e_ewc_sdc.py] => Task 1, Epoch 51/51 => Loss 0.004, Loss_aug 0.000200, Train_accy 82.08, Pos-Dist 0.574784, Neg-Dist 0.865856,
+2021-11-10 22:21:02,307 [e_ewc_sdc.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-10 22:21:14,149 [e_ewc_sdc.py] => Exemplar size: 1200
+2021-11-10 22:21:14,149 [trainer.py] => No CNN accuracy.
+2021-11-10 22:21:14,150 [trainer.py] => NME: {'total': 63.23, '00-09': 71.5, '10-19': 59.2, '20-29': 74.9, '30-39': 64.9, '40-49': 72.7, '50-59': 36.2, 'old': 68.64, 'new': 36.2}
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated NME: {'total': 63.28, '00-09': 70.6, '10-19': 59.7, '20-29': 74.6, '30-39': 65.4, '40-49': 73.4, '50-59': 36.0, 'old': 68.74, 'new': 36.0}
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_with_memory NME: {'total': 63.23, '00-09': 70.5, '10-19': 59.7, '20-29': 74.6, '30-39': 65.3, '40-49': 73.2, '50-59': 36.1, 'old': 68.66, 'new': 36.1}
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_only_memory NME: {'total': 63.22, '00-09': 70.5, '10-19': 59.5, '20-29': 74.9, '30-39': 65.1, '40-49': 73.1, '50-59': 36.2, 'old': 68.62, 'new': 36.2}
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_corresponding_memory NME: {'total': 63.13, '00-09': 70.3, '10-19': 59.5, '20-29': 74.9, '30-39': 64.8, '40-49': 73.0, '50-59': 36.3, 'old': 68.5, 'new': 36.3}
+2021-11-10 22:21:14,150 [trainer.py] => NME top1 curve: [72.18, 63.23]
+2021-11-10 22:21:14,150 [trainer.py] => NME top5 curve: [92.54, 87.45]
+
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated NME top1 curve: [63.28]
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated NME top5 curve: [87.5]
+
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_with_memory NME top1 curve: [63.23]
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_with_memory NME top5 curve: [87.52]
+
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_only_memory NME top1 curve: [63.22]
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_only_memory NME top5 curve: [87.4]
+
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_corresponding_memory NME top1 curve: [63.13]
+2021-11-10 22:21:14,150 [trainer.py] => Calibrated_corresponding_memory NME top5 curve: [87.42]
+
+2021-11-10 22:21:14,151 [trainer.py] => All params: 499729
+2021-11-10 22:21:14,151 [trainer.py] => Trainable params: 499729
+2021-11-10 22:21:14,151 [e_ewc_sdc.py] => Learning on 60-70
+2021-11-10 22:21:17,385 [e_ewc_sdc.py] => Task 2, Epoch 1/51 => Loss 0.007, Loss_aug 0.000001, Train_accy 79.04, Pos-Dist 0.585261, Neg-Dist 0.843042,
+2021-11-10 22:21:21,887 [e_ewc_sdc.py] => Task 2, Epoch 2/51 => Loss 0.006, Loss_aug 0.000003, Train_accy 79.99, Pos-Dist 0.582430, Neg-Dist 0.856267,
+2021-11-10 22:21:26,379 [e_ewc_sdc.py] => Task 2, Epoch 3/51 => Loss 0.007, Loss_aug 0.000005, Train_accy 79.53, Pos-Dist 0.582752, Neg-Dist 0.848248,
+2021-11-10 22:21:30,898 [e_ewc_sdc.py] => Task 2, Epoch 4/51 => Loss 0.005, Loss_aug 0.000007, Train_accy 80.79, Pos-Dist 0.589815, Neg-Dist 0.861009,
+2021-11-10 22:21:35,352 [e_ewc_sdc.py] => Task 2, Epoch 5/51 => Loss 0.005, Loss_aug 0.000007, Train_accy 80.49, Pos-Dist 0.582031, Neg-Dist 0.857040,
+2021-11-10 22:21:39,811 [e_ewc_sdc.py] => Task 2, Epoch 6/51 => Loss 0.005, Loss_aug 0.000011, Train_accy 80.24, Pos-Dist 0.584332, Neg-Dist 0.861226,
+2021-11-10 22:21:44,306 [e_ewc_sdc.py] => Task 2, Epoch 7/51 => Loss 0.008, Loss_aug 0.000014, Train_accy 78.61, Pos-Dist 0.592256, Neg-Dist 0.845033,
+2021-11-10 22:21:48,810 [e_ewc_sdc.py] => Task 2, Epoch 8/51 => Loss 0.008, Loss_aug 0.000012, Train_accy 78.15, Pos-Dist 0.586107, Neg-Dist 0.849952,
+2021-11-10 22:21:53,338 [e_ewc_sdc.py] => Task 2, Epoch 9/51 => Loss 0.008, Loss_aug 0.000026, Train_accy 79.37, Pos-Dist 0.591935, Neg-Dist 0.850940,
+2021-11-10 22:21:57,869 [e_ewc_sdc.py] => Task 2, Epoch 10/51 => Loss 0.005, Loss_aug 0.000023, Train_accy 81.00, Pos-Dist 0.583586, Neg-Dist 0.865970,
+2021-11-10 22:22:02,482 [e_ewc_sdc.py] => Task 2, Epoch 11/51 => Loss 0.005, Loss_aug 0.000028, Train_accy 81.14, Pos-Dist 0.580600, Neg-Dist 0.862067,
+2021-11-10 22:22:07,070 [e_ewc_sdc.py] => Task 2, Epoch 12/51 => Loss 0.005, Loss_aug 0.000036, Train_accy 81.50, Pos-Dist 0.580917, Neg-Dist 0.854571,
+2021-11-10 22:22:11,680 [e_ewc_sdc.py] => Task 2, Epoch 13/51 => Loss 0.005, Loss_aug 0.000028, Train_accy 80.77, Pos-Dist 0.580709, Neg-Dist 0.858019,
+2021-11-10 22:22:16,297 [e_ewc_sdc.py] => Task 2, Epoch 14/51 => Loss 0.006, Loss_aug 0.000032, Train_accy 79.71, Pos-Dist 0.582710, Neg-Dist 0.854299,
+2021-11-10 22:22:20,922 [e_ewc_sdc.py] => Task 2, Epoch 15/51 => Loss 0.008, Loss_aug 0.000045, Train_accy 78.49, Pos-Dist 0.592635, Neg-Dist 0.856173,
+2021-11-10 22:22:25,532 [e_ewc_sdc.py] => Task 2, Epoch 16/51 => Loss 0.007, Loss_aug 0.000041, Train_accy 78.40, Pos-Dist 0.590977, Neg-Dist 0.850691,
+2021-11-10 22:22:30,141 [e_ewc_sdc.py] => Task 2, Epoch 17/51 => Loss 0.005, Loss_aug 0.000052, Train_accy 80.33, Pos-Dist 0.588687, Neg-Dist 0.856153,
+2021-11-10 22:22:34,737 [e_ewc_sdc.py] => Task 2, Epoch 18/51 => Loss 0.005, Loss_aug 0.000069, Train_accy 80.42, Pos-Dist 0.578507, Neg-Dist 0.854932,
+2021-11-10 22:22:39,326 [e_ewc_sdc.py] => Task 2, Epoch 19/51 => Loss 0.004, Loss_aug 0.000060, Train_accy 81.96, Pos-Dist 0.584033, Neg-Dist 0.865826,
+2021-11-10 22:22:43,889 [e_ewc_sdc.py] => Task 2, Epoch 20/51 => Loss 0.006, Loss_aug 0.000058, Train_accy 80.24, Pos-Dist 0.581973, Neg-Dist 0.862995,
+2021-11-10 22:22:48,447 [e_ewc_sdc.py] => Task 2, Epoch 21/51 => Loss 0.007, Loss_aug 0.000068, Train_accy 79.18, Pos-Dist 0.576587, Neg-Dist 0.852709,
+2021-11-10 22:22:53,017 [e_ewc_sdc.py] => Task 2, Epoch 22/51 => Loss 0.006, Loss_aug 0.000086, Train_accy 79.99, Pos-Dist 0.586756, Neg-Dist 0.857113,
+2021-11-10 22:22:57,603 [e_ewc_sdc.py] => Task 2, Epoch 23/51 => Loss 0.006, Loss_aug 0.000072, Train_accy 79.73, Pos-Dist 0.585607, Neg-Dist 0.853914,
+2021-11-10 22:23:02,158 [e_ewc_sdc.py] => Task 2, Epoch 24/51 => Loss 0.006, Loss_aug 0.000092, Train_accy 80.01, Pos-Dist 0.583948, Neg-Dist 0.852041,
+2021-11-10 22:23:06,736 [e_ewc_sdc.py] => Task 2, Epoch 25/51 => Loss 0.006, Loss_aug 0.000089, Train_accy 79.71, Pos-Dist 0.585226, Neg-Dist 0.853574,
+2021-11-10 22:23:11,302 [e_ewc_sdc.py] => Task 2, Epoch 26/51 => Loss 0.006, Loss_aug 0.000083, Train_accy 80.51, Pos-Dist 0.578636, Neg-Dist 0.854388,
+2021-11-10 22:23:15,851 [e_ewc_sdc.py] => Task 2, Epoch 27/51 => Loss 0.006, Loss_aug 0.000103, Train_accy 79.89, Pos-Dist 0.586790, Neg-Dist 0.858542,
+2021-11-10 22:23:20,405 [e_ewc_sdc.py] => Task 2, Epoch 28/51 => Loss 0.005, Loss_aug 0.000085, Train_accy 81.18, Pos-Dist 0.577860, Neg-Dist 0.862277,
+2021-11-10 22:23:24,928 [e_ewc_sdc.py] => Task 2, Epoch 29/51 => Loss 0.007, Loss_aug 0.000109, Train_accy 80.01, Pos-Dist 0.581753, Neg-Dist 0.863002,
+2021-11-10 22:23:29,472 [e_ewc_sdc.py] => Task 2, Epoch 30/51 => Loss 0.006, Loss_aug 0.000100, Train_accy 79.60, Pos-Dist 0.588392, Neg-Dist 0.858434,
+2021-11-10 22:23:34,063 [e_ewc_sdc.py] => Task 2, Epoch 31/51 => Loss 0.006, Loss_aug 0.000126, Train_accy 80.33, Pos-Dist 0.583130, Neg-Dist 0.853435,
+2021-11-10 22:23:38,650 [e_ewc_sdc.py] => Task 2, Epoch 32/51 => Loss 0.006, Loss_aug 0.000127, Train_accy 80.56, Pos-Dist 0.586010, Neg-Dist 0.858561,
+2021-11-10 22:23:43,261 [e_ewc_sdc.py] => Task 2, Epoch 33/51 => Loss 0.007, Loss_aug 0.000156, Train_accy 79.53, Pos-Dist 0.582369, Neg-Dist 0.858607,
+2021-11-10 22:23:47,839 [e_ewc_sdc.py] => Task 2, Epoch 34/51 => Loss 0.006, Loss_aug 0.000132, Train_accy 79.64, Pos-Dist 0.586646, Neg-Dist 0.863214,
+2021-11-10 22:23:52,418 [e_ewc_sdc.py] => Task 2, Epoch 35/51 => Loss 0.005, Loss_aug 0.000163, Train_accy 81.48, Pos-Dist 0.582846, Neg-Dist 0.860018,
+2021-11-10 22:23:56,981 [e_ewc_sdc.py] => Task 2, Epoch 36/51 => Loss 0.006, Loss_aug 0.000147, Train_accy 79.99, Pos-Dist 0.591194, Neg-Dist 0.857146,
+2021-11-10 22:24:01,528 [e_ewc_sdc.py] => Task 2, Epoch 37/51 => Loss 0.008, Loss_aug 0.000137, Train_accy 78.01, Pos-Dist 0.591012, Neg-Dist 0.847170,
+2021-11-10 22:24:06,098 [e_ewc_sdc.py] => Task 2, Epoch 38/51 => Loss 0.007, Loss_aug 0.000143, Train_accy 79.32, Pos-Dist 0.584517, Neg-Dist 0.855123,
+2021-11-10 22:24:10,618 [e_ewc_sdc.py] => Task 2, Epoch 39/51 => Loss 0.005, Loss_aug 0.000147, Train_accy 80.51, Pos-Dist 0.581436, Neg-Dist 0.852449,
+2021-11-10 22:24:15,155 [e_ewc_sdc.py] => Task 2, Epoch 40/51 => Loss 0.006, Loss_aug 0.000179, Train_accy 79.78, Pos-Dist 0.584282, Neg-Dist 0.853443,
+2021-11-10 22:24:19,693 [e_ewc_sdc.py] => Task 2, Epoch 41/51 => Loss 0.006, Loss_aug 0.000112, Train_accy 80.33, Pos-Dist 0.579491, Neg-Dist 0.854611,
+2021-11-10 22:24:24,291 [e_ewc_sdc.py] => Task 2, Epoch 42/51 => Loss 0.008, Loss_aug 0.000153, Train_accy 78.31, Pos-Dist 0.585924, Neg-Dist 0.855280,
+2021-11-10 22:24:28,862 [e_ewc_sdc.py] => Task 2, Epoch 43/51 => Loss 0.004, Loss_aug 0.000174, Train_accy 81.43, Pos-Dist 0.581677, Neg-Dist 0.859433,
+2021-11-10 22:24:33,446 [e_ewc_sdc.py] => Task 2, Epoch 44/51 => Loss 0.005, Loss_aug 0.000219, Train_accy 81.39, Pos-Dist 0.580802, Neg-Dist 0.868146,
+2021-11-10 22:24:38,041 [e_ewc_sdc.py] => Task 2, Epoch 45/51 => Loss 0.006, Loss_aug 0.000176, Train_accy 80.35, Pos-Dist 0.585083, Neg-Dist 0.859479,
+2021-11-10 22:24:42,615 [e_ewc_sdc.py] => Task 2, Epoch 46/51 => Loss 0.007, Loss_aug 0.000201, Train_accy 79.14, Pos-Dist 0.588796, Neg-Dist 0.858042,
+2021-11-10 22:24:47,210 [e_ewc_sdc.py] => Task 2, Epoch 47/51 => Loss 0.006, Loss_aug 0.000210, Train_accy 79.83, Pos-Dist 0.587364, Neg-Dist 0.855112,
+2021-11-10 22:24:51,822 [e_ewc_sdc.py] => Task 2, Epoch 48/51 => Loss 0.006, Loss_aug 0.000231, Train_accy 79.99, Pos-Dist 0.583615, Neg-Dist 0.857610,
+2021-11-10 22:24:56,407 [e_ewc_sdc.py] => Task 2, Epoch 49/51 => Loss 0.006, Loss_aug 0.000197, Train_accy 80.35, Pos-Dist 0.583753, Neg-Dist 0.848212,
+2021-11-10 22:25:00,995 [e_ewc_sdc.py] => Task 2, Epoch 50/51 => Loss 0.007, Loss_aug 0.000189, Train_accy 78.54, Pos-Dist 0.589186, Neg-Dist 0.845486,
+2021-11-10 22:25:05,559 [e_ewc_sdc.py] => Task 2, Epoch 51/51 => Loss 0.007, Loss_aug 0.000207, Train_accy 79.11, Pos-Dist 0.585659, Neg-Dist 0.849580,
+2021-11-10 22:25:07,689 [e_ewc_sdc.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-10 22:25:21,410 [e_ewc_sdc.py] => Exemplar size: 1400
+2021-11-10 22:25:21,411 [trainer.py] => No CNN accuracy.
+2021-11-10 22:25:21,411 [trainer.py] => NME: {'total': 57.66, '00-09': 69.6, '10-19': 57.5, '20-29': 73.1, '30-39': 62.7, '40-49': 70.4, '50-59': 30.6, '60-69': 39.7, 'old': 60.65, 'new': 39.7}
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated NME: {'total': 57.73, '00-09': 69.6, '10-19': 57.4, '20-29': 73.6, '30-39': 62.7, '40-49': 71.3, '50-59': 30.8, '60-69': 38.7, 'old': 60.9, 'new': 38.7}
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_with_memory NME: {'total': 57.73, '00-09': 69.8, '10-19': 57.2, '20-29': 73.3, '30-39': 62.9, '40-49': 71.2, '50-59': 30.9, '60-69': 38.8, 'old': 60.88, 'new': 38.8}
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_only_memory NME: {'total': 57.79, '00-09': 69.6, '10-19': 57.2, '20-29': 73.3, '30-39': 62.7, '40-49': 71.4, '50-59': 31.4, '60-69': 38.9, 'old': 60.93, 'new': 38.9}
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_corresponding_memory NME: {'total': 57.6, '00-09': 69.7, '10-19': 57.0, '20-29': 73.2, '30-39': 62.8, '40-49': 71.4, '50-59': 30.0, '60-69': 39.1, 'old': 60.68, 'new': 39.1}
+2021-11-10 22:25:21,411 [trainer.py] => NME top1 curve: [72.18, 63.23, 57.66]
+2021-11-10 22:25:21,411 [trainer.py] => NME top5 curve: [92.54, 87.45, 83.73]
+
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated NME top1 curve: [63.28, 57.73]
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated NME top5 curve: [87.5, 83.77]
+
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_with_memory NME top1 curve: [63.23, 57.73]
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_with_memory NME top5 curve: [87.52, 83.71]
+
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_only_memory NME top1 curve: [63.22, 57.79]
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_only_memory NME top5 curve: [87.4, 83.74]
+
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_corresponding_memory NME top1 curve: [63.13, 57.6]
+2021-11-10 22:25:21,411 [trainer.py] => Calibrated_corresponding_memory NME top5 curve: [87.42, 83.87]
+
+2021-11-10 22:25:21,412 [trainer.py] => All params: 499729
+2021-11-10 22:25:21,412 [trainer.py] => Trainable params: 499729
+2021-11-10 22:25:21,412 [e_ewc_sdc.py] => Learning on 70-80
+2021-11-10 22:25:25,092 [e_ewc_sdc.py] => Task 3, Epoch 1/51 => Loss 0.006, Loss_aug 0.000001, Train_accy 79.12, Pos-Dist 0.589340, Neg-Dist 0.848199,
+2021-11-10 22:25:30,333 [e_ewc_sdc.py] => Task 3, Epoch 2/51 => Loss 0.007, Loss_aug 0.000003, Train_accy 78.63, Pos-Dist 0.589557, Neg-Dist 0.848458,
+2021-11-10 22:25:35,617 [e_ewc_sdc.py] => Task 3, Epoch 3/51 => Loss 0.007, Loss_aug 0.000005, Train_accy 78.77, Pos-Dist 0.596381, Neg-Dist 0.853036,
+2021-11-10 22:25:40,877 [e_ewc_sdc.py] => Task 3, Epoch 4/51 => Loss 0.008, Loss_aug 0.000010, Train_accy 78.50, Pos-Dist 0.586306, Neg-Dist 0.848979,
+2021-11-10 22:25:46,129 [e_ewc_sdc.py] => Task 3, Epoch 5/51 => Loss 0.007, Loss_aug 0.000013, Train_accy 78.87, Pos-Dist 0.589499, Neg-Dist 0.852610,
+2021-11-10 22:25:51,378 [e_ewc_sdc.py] => Task 3, Epoch 6/51 => Loss 0.007, Loss_aug 0.000013, Train_accy 78.61, Pos-Dist 0.587828, Neg-Dist 0.847184,
+2021-11-10 22:25:56,665 [e_ewc_sdc.py] => Task 3, Epoch 7/51 => Loss 0.008, Loss_aug 0.000021, Train_accy 77.75, Pos-Dist 0.593446, Neg-Dist 0.839043,
+2021-11-10 22:26:01,913 [e_ewc_sdc.py] => Task 3, Epoch 8/51 => Loss 0.008, Loss_aug 0.000025, Train_accy 77.36, Pos-Dist 0.589695, Neg-Dist 0.836072,
+2021-11-10 22:26:07,249 [e_ewc_sdc.py] => Task 3, Epoch 9/51 => Loss 0.008, Loss_aug 0.000029, Train_accy 78.57, Pos-Dist 0.590615, Neg-Dist 0.854787,
+2021-11-10 22:26:12,587 [e_ewc_sdc.py] => Task 3, Epoch 10/51 => Loss 0.006, Loss_aug 0.000026, Train_accy 79.90, Pos-Dist 0.585040, Neg-Dist 0.849303,
+2021-11-10 22:26:17,891 [e_ewc_sdc.py] => Task 3, Epoch 11/51 => Loss 0.008, Loss_aug 0.000035, Train_accy 78.85, Pos-Dist 0.585118, Neg-Dist 0.849812,
+2021-11-10 22:26:23,246 [e_ewc_sdc.py] => Task 3, Epoch 12/51 => Loss 0.008, Loss_aug 0.000040, Train_accy 77.11, Pos-Dist 0.592068, Neg-Dist 0.842953,
+2021-11-10 22:26:28,582 [e_ewc_sdc.py] => Task 3, Epoch 13/51 => Loss 0.008, Loss_aug 0.000040, Train_accy 77.87, Pos-Dist 0.598573, Neg-Dist 0.849791,
+2021-11-10 22:26:33,936 [e_ewc_sdc.py] => Task 3, Epoch 14/51 => Loss 0.006, Loss_aug 0.000048, Train_accy 79.55, Pos-Dist 0.588222, Neg-Dist 0.849186,
+2021-11-10 22:26:39,280 [e_ewc_sdc.py] => Task 3, Epoch 15/51 => Loss 0.006, Loss_aug 0.000063, Train_accy 80.18, Pos-Dist 0.584041, Neg-Dist 0.853774,
+2021-11-10 22:26:44,606 [e_ewc_sdc.py] => Task 3, Epoch 16/51 => Loss 0.007, Loss_aug 0.000057, Train_accy 78.93, Pos-Dist 0.592433, Neg-Dist 0.851342,
+2021-11-10 22:26:49,955 [e_ewc_sdc.py] => Task 3, Epoch 17/51 => Loss 0.008, Loss_aug 0.000069, Train_accy 77.70, Pos-Dist 0.586884, Neg-Dist 0.845606,
+2021-11-10 22:26:55,330 [e_ewc_sdc.py] => Task 3, Epoch 18/51 => Loss 0.006, Loss_aug 0.000068, Train_accy 79.20, Pos-Dist 0.592731, Neg-Dist 0.850153,
+2021-11-10 22:27:00,727 [e_ewc_sdc.py] => Task 3, Epoch 19/51 => Loss 0.007, Loss_aug 0.000064, Train_accy 78.50, Pos-Dist 0.587585, Neg-Dist 0.850299,
+2021-11-10 22:27:06,077 [e_ewc_sdc.py] => Task 3, Epoch 20/51 => Loss 0.008, Loss_aug 0.000088, Train_accy 78.30, Pos-Dist 0.587460, Neg-Dist 0.849108,
+2021-11-10 22:27:11,475 [e_ewc_sdc.py] => Task 3, Epoch 21/51 => Loss 0.007, Loss_aug 0.000087, Train_accy 79.36, Pos-Dist 0.588149, Neg-Dist 0.847772,
+2021-11-10 22:27:16,855 [e_ewc_sdc.py] => Task 3, Epoch 22/51 => Loss 0.009, Loss_aug 0.000107, Train_accy 77.38, Pos-Dist 0.589315, Neg-Dist 0.841693,
+2021-11-10 22:27:22,271 [e_ewc_sdc.py] => Task 3, Epoch 23/51 => Loss 0.006, Loss_aug 0.000093, Train_accy 79.84, Pos-Dist 0.584189, Neg-Dist 0.850345,
+2021-11-10 22:27:27,633 [e_ewc_sdc.py] => Task 3, Epoch 24/51 => Loss 0.008, Loss_aug 0.000101, Train_accy 77.62, Pos-Dist 0.589631, Neg-Dist 0.835051,
+2021-11-10 22:27:33,021 [e_ewc_sdc.py] => Task 3, Epoch 25/51 => Loss 0.008, Loss_aug 0.000111, Train_accy 78.22, Pos-Dist 0.584615, Neg-Dist 0.842250,
+2021-11-10 22:27:38,400 [e_ewc_sdc.py] => Task 3, Epoch 26/51 => Loss 0.005, Loss_aug 0.000129, Train_accy 80.49, Pos-Dist 0.584836, Neg-Dist 0.852354,
+2021-11-10 22:27:43,759 [e_ewc_sdc.py] => Task 3, Epoch 27/51 => Loss 0.006, Loss_aug 0.000099, Train_accy 79.84, Pos-Dist 0.588433, Neg-Dist 0.854542,
+2021-11-10 22:27:49,126 [e_ewc_sdc.py] => Task 3, Epoch 28/51 => Loss 0.008, Loss_aug 0.000143, Train_accy 77.85, Pos-Dist 0.589553, Neg-Dist 0.845209,
+2021-11-10 22:27:54,469 [e_ewc_sdc.py] => Task 3, Epoch 29/51 => Loss 0.008, Loss_aug 0.000143, Train_accy 78.32, Pos-Dist 0.589371, Neg-Dist 0.843268,
+2021-11-10 22:27:59,863 [e_ewc_sdc.py] => Task 3, Epoch 30/51 => Loss 0.006, Loss_aug 0.000102, Train_accy 80.68, Pos-Dist 0.581273, Neg-Dist 0.871835,
+2021-11-10 22:28:05,246 [e_ewc_sdc.py] => Task 3, Epoch 31/51 => Loss 0.007, Loss_aug 0.000155, Train_accy 78.07, Pos-Dist 0.586846, Neg-Dist 0.842008,
+2021-11-10 22:28:10,648 [e_ewc_sdc.py] => Task 3, Epoch 32/51 => Loss 0.007, Loss_aug 0.000137, Train_accy 79.14, Pos-Dist 0.588297, Neg-Dist 0.857590,
+2021-11-10 22:28:16,060 [e_ewc_sdc.py] => Task 3, Epoch 33/51 => Loss 0.008, Loss_aug 0.000165, Train_accy 78.63, Pos-Dist 0.584763, Neg-Dist 0.840298,
+2021-11-10 22:28:21,466 [e_ewc_sdc.py] => Task 3, Epoch 34/51 => Loss 0.008, Loss_aug 0.000127, Train_accy 77.62, Pos-Dist 0.587600, Neg-Dist 0.840063,
+2021-11-10 22:28:26,795 [e_ewc_sdc.py] => Task 3, Epoch 35/51 => Loss 0.009, Loss_aug 0.000150, Train_accy 77.75, Pos-Dist 0.586299, Neg-Dist 0.846526,
+2021-11-10 22:28:32,141 [e_ewc_sdc.py] => Task 3, Epoch 36/51 => Loss 0.008, Loss_aug 0.000161, Train_accy 78.40, Pos-Dist 0.584398, Neg-Dist 0.843906,
+2021-11-10 22:28:37,530 [e_ewc_sdc.py] => Task 3, Epoch 37/51 => Loss 0.007, Loss_aug 0.000148, Train_accy 78.91, Pos-Dist 0.584262, Neg-Dist 0.851864,
+2021-11-10 22:28:42,880 [e_ewc_sdc.py] => Task 3, Epoch 38/51 => Loss 0.008, Loss_aug 0.000188, Train_accy 77.64, Pos-Dist 0.593070, Neg-Dist 0.844478,
+2021-11-10 22:28:48,225 [e_ewc_sdc.py] => Task 3, Epoch 39/51 => Loss 0.006, Loss_aug 0.000184, Train_accy 80.27, Pos-Dist 0.585329, Neg-Dist 0.849547,
+2021-11-10 22:28:53,615 [e_ewc_sdc.py] => Task 3, Epoch 40/51 => Loss 0.008, Loss_aug 0.000152, Train_accy 78.26, Pos-Dist 0.584115, Neg-Dist 0.840166,
+2021-11-10 22:28:58,957 [e_ewc_sdc.py] => Task 3, Epoch 41/51 => Loss 0.007, Loss_aug 0.000218, Train_accy 79.04, Pos-Dist 0.588372, Neg-Dist 0.848274,
+2021-11-10 22:29:04,350 [e_ewc_sdc.py] => Task 3, Epoch 42/51 => Loss 0.006, Loss_aug 0.000194, Train_accy 79.63, Pos-Dist 0.581202, Neg-Dist 0.851152,
+2021-11-10 22:29:09,717 [e_ewc_sdc.py] => Task 3, Epoch 43/51 => Loss 0.008, Loss_aug 0.000197, Train_accy 78.71, Pos-Dist 0.586612, Neg-Dist 0.844270,
+2021-11-10 22:29:15,068 [e_ewc_sdc.py] => Task 3, Epoch 44/51 => Loss 0.006, Loss_aug 0.000230, Train_accy 79.88, Pos-Dist 0.578920, Neg-Dist 0.839386,
+2021-11-10 22:29:20,451 [e_ewc_sdc.py] => Task 3, Epoch 45/51 => Loss 0.007, Loss_aug 0.000187, Train_accy 78.81, Pos-Dist 0.588623, Neg-Dist 0.850629,
+2021-11-10 22:29:25,800 [e_ewc_sdc.py] => Task 3, Epoch 46/51 => Loss 0.006, Loss_aug 0.000221, Train_accy 79.24, Pos-Dist 0.581647, Neg-Dist 0.844538,
+2021-11-10 22:29:31,175 [e_ewc_sdc.py] => Task 3, Epoch 47/51 => Loss 0.004, Loss_aug 0.000198, Train_accy 81.31, Pos-Dist 0.584120, Neg-Dist 0.861289,
+2021-11-10 22:29:36,537 [e_ewc_sdc.py] => Task 3, Epoch 48/51 => Loss 0.008, Loss_aug 0.000289, Train_accy 78.55, Pos-Dist 0.587318, Neg-Dist 0.850362,
+2021-11-10 22:29:41,884 [e_ewc_sdc.py] => Task 3, Epoch 49/51 => Loss 0.006, Loss_aug 0.000220, Train_accy 79.73, Pos-Dist 0.584932, Neg-Dist 0.850265,
+2021-11-10 22:29:47,204 [e_ewc_sdc.py] => Task 3, Epoch 50/51 => Loss 0.005, Loss_aug 0.000238, Train_accy 80.72, Pos-Dist 0.584639, Neg-Dist 0.855105,
+2021-11-10 22:29:52,524 [e_ewc_sdc.py] => Task 3, Epoch 51/51 => Loss 0.007, Loss_aug 0.000184, Train_accy 79.30, Pos-Dist 0.585643, Neg-Dist 0.850294,
+2021-11-10 22:29:54,995 [e_ewc_sdc.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-10 22:30:10,393 [e_ewc_sdc.py] => Exemplar size: 1600
+2021-11-10 22:30:10,393 [trainer.py] => No CNN accuracy.
+2021-11-10 22:30:10,393 [trainer.py] => NME: {'total': 52.49, '00-09': 68.2, '10-19': 54.4, '20-29': 71.0, '30-39': 60.6, '40-49': 70.6, '50-59': 26.2, '60-69': 34.5, '70-79': 34.4, 'old': 55.07, 'new': 34.4}
+2021-11-10 22:30:10,393 [trainer.py] => Calibrated NME: {'total': 53.12, '00-09': 68.8, '10-19': 56.9, '20-29': 72.6, '30-39': 60.6, '40-49': 70.0, '50-59': 27.6, '60-69': 35.3, '70-79': 33.2, 'old': 55.97, 'new': 33.2}
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_with_memory NME: {'total': 53.1, '00-09': 68.8, '10-19': 56.9, '20-29': 72.4, '30-39': 60.9, '40-49': 70.0, '50-59': 27.7, '60-69': 34.9, '70-79': 33.2, 'old': 55.94, 'new': 33.2}
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_only_memory NME: {'total': 53.04, '00-09': 68.2, '10-19': 56.7, '20-29': 72.2, '30-39': 61.2, '40-49': 70.3, '50-59': 27.6, '60-69': 34.8, '70-79': 33.3, 'old': 55.86, 'new': 33.3}
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_corresponding_memory NME: {'total': 53.11, '00-09': 68.7, '10-19': 56.2, '20-29': 72.5, '30-39': 61.2, '40-49': 69.7, '50-59': 27.5, '60-69': 35.0, '70-79': 34.1, 'old': 55.83, 'new': 34.1}
+2021-11-10 22:30:10,394 [trainer.py] => NME top1 curve: [72.18, 63.23, 57.66, 52.49]
+2021-11-10 22:30:10,394 [trainer.py] => NME top5 curve: [92.54, 87.45, 83.73, 80.28]
+
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated NME top1 curve: [63.28, 57.73, 53.12]
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated NME top5 curve: [87.5, 83.77, 80.54]
+
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_with_memory NME top1 curve: [63.23, 57.73, 53.1]
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_with_memory NME top5 curve: [87.52, 83.71, 80.49]
+
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_only_memory NME top1 curve: [63.22, 57.79, 53.04]
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_only_memory NME top5 curve: [87.4, 83.74, 80.56]
+
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_corresponding_memory NME top1 curve: [63.13, 57.6, 53.11]
+2021-11-10 22:30:10,394 [trainer.py] => Calibrated_corresponding_memory NME top5 curve: [87.42, 83.87, 80.5]
+
+2021-11-10 22:30:10,394 [trainer.py] => All params: 499729
+2021-11-10 22:30:10,395 [trainer.py] => Trainable params: 499729
+2021-11-10 22:30:10,395 [e_ewc_sdc.py] => Learning on 80-90
+2021-11-10 22:30:14,379 [e_ewc_sdc.py] => Task 4, Epoch 1/51 => Loss 0.010, Loss_aug 0.000001, Train_accy 76.95, Pos-Dist 0.590505, Neg-Dist 0.845911,
+2021-11-10 22:30:20,133 [e_ewc_sdc.py] => Task 4, Epoch 2/51 => Loss 0.008, Loss_aug 0.000004, Train_accy 77.77, Pos-Dist 0.588951, Neg-Dist 0.842259,
+2021-11-10 22:30:25,863 [e_ewc_sdc.py] => Task 4, Epoch 3/51 => Loss 0.009, Loss_aug 0.000007, Train_accy 76.95, Pos-Dist 0.590906, Neg-Dist 0.833247,
+2021-11-10 22:30:31,686 [e_ewc_sdc.py] => Task 4, Epoch 4/51 => Loss 0.006, Loss_aug 0.000009, Train_accy 79.42, Pos-Dist 0.586980, Neg-Dist 0.848954,
+2021-11-10 22:30:37,465 [e_ewc_sdc.py] => Task 4, Epoch 5/51 => Loss 0.008, Loss_aug 0.000012, Train_accy 76.53, Pos-Dist 0.594593, Neg-Dist 0.840658,
+2021-11-10 22:30:43,263 [e_ewc_sdc.py] => Task 4, Epoch 6/51 => Loss 0.008, Loss_aug 0.000015, Train_accy 78.57, Pos-Dist 0.586754, Neg-Dist 0.845310,
+2021-11-10 22:30:49,038 [e_ewc_sdc.py] => Task 4, Epoch 7/51 => Loss 0.008, Loss_aug 0.000017, Train_accy 77.72, Pos-Dist 0.596919, Neg-Dist 0.843209,
+2021-11-10 22:30:54,859 [e_ewc_sdc.py] => Task 4, Epoch 8/51 => Loss 0.008, Loss_aug 0.000025, Train_accy 78.30, Pos-Dist 0.591132, Neg-Dist 0.839470,
+2021-11-10 22:31:00,664 [e_ewc_sdc.py] => Task 4, Epoch 9/51 => Loss 0.008, Loss_aug 0.000031, Train_accy 77.75, Pos-Dist 0.592700, Neg-Dist 0.839384,
+2021-11-10 22:31:06,490 [e_ewc_sdc.py] => Task 4, Epoch 10/51 => Loss 0.007, Loss_aug 0.000037, Train_accy 78.43, Pos-Dist 0.589540, Neg-Dist 0.845022,
+2021-11-10 22:31:12,329 [e_ewc_sdc.py] => Task 4, Epoch 11/51 => Loss 0.009, Loss_aug 0.000039, Train_accy 76.70, Pos-Dist 0.592598, Neg-Dist 0.837898,
+2021-11-10 22:31:18,180 [e_ewc_sdc.py] => Task 4, Epoch 12/51 => Loss 0.008, Loss_aug 0.000042, Train_accy 78.18, Pos-Dist 0.588524, Neg-Dist 0.838988,
+2021-11-10 22:31:24,080 [e_ewc_sdc.py] => Task 4, Epoch 13/51 => Loss 0.008, Loss_aug 0.000040, Train_accy 77.41, Pos-Dist 0.594569, Neg-Dist 0.843855,
+2021-11-10 22:31:29,979 [e_ewc_sdc.py] => Task 4, Epoch 14/51 => Loss 0.009, Loss_aug 0.000059, Train_accy 76.85, Pos-Dist 0.592461, Neg-Dist 0.839728,
+2021-11-10 22:31:35,875 [e_ewc_sdc.py] => Task 4, Epoch 15/51 => Loss 0.008, Loss_aug 0.000066, Train_accy 78.14, Pos-Dist 0.589731, Neg-Dist 0.850322,
+2021-11-10 22:31:41,794 [e_ewc_sdc.py] => Task 4, Epoch 16/51 => Loss 0.007, Loss_aug 0.000072, Train_accy 78.44, Pos-Dist 0.592961, Neg-Dist 0.844377,
+2021-11-10 22:31:47,692 [e_ewc_sdc.py] => Task 4, Epoch 17/51 => Loss 0.008, Loss_aug 0.000065, Train_accy 77.79, Pos-Dist 0.587286, Neg-Dist 0.839320,
+2021-11-10 22:31:53,532 [e_ewc_sdc.py] => Task 4, Epoch 18/51 => Loss 0.007, Loss_aug 0.000084, Train_accy 77.81, Pos-Dist 0.588897, Neg-Dist 0.840577,
+2021-11-10 22:31:59,426 [e_ewc_sdc.py] => Task 4, Epoch 19/51 => Loss 0.008, Loss_aug 0.000090, Train_accy 77.57, Pos-Dist 0.591849, Neg-Dist 0.842113,
+2021-11-10 22:32:05,323 [e_ewc_sdc.py] => Task 4, Epoch 20/51 => Loss 0.008, Loss_aug 0.000092, Train_accy 77.57, Pos-Dist 0.586550, Neg-Dist 0.837447,
+2021-11-10 22:32:11,168 [e_ewc_sdc.py] => Task 4, Epoch 21/51 => Loss 0.007, Loss_aug 0.000099, Train_accy 78.39, Pos-Dist 0.586920, Neg-Dist 0.845614,
+2021-11-10 22:32:16,979 [e_ewc_sdc.py] => Task 4, Epoch 22/51 => Loss 0.009, Loss_aug 0.000099, Train_accy 76.37, Pos-Dist 0.591443, Neg-Dist 0.829991,
+2021-11-10 22:32:22,827 [e_ewc_sdc.py] => Task 4, Epoch 23/51 => Loss 0.007, Loss_aug 0.000104, Train_accy 78.36, Pos-Dist 0.588530, Neg-Dist 0.847251,
+2021-11-10 22:32:28,681 [e_ewc_sdc.py] => Task 4, Epoch 24/51 => Loss 0.008, Loss_aug 0.000110, Train_accy 78.48, Pos-Dist 0.591390, Neg-Dist 0.844318,
+2021-11-10 22:32:34,526 [e_ewc_sdc.py] => Task 4, Epoch 25/51 => Loss 0.008, Loss_aug 0.000129, Train_accy 77.52, Pos-Dist 0.587178, Neg-Dist 0.835927,
+2021-11-10 22:32:40,354 [e_ewc_sdc.py] => Task 4, Epoch 26/51 => Loss 0.007, Loss_aug 0.000131, Train_accy 78.11, Pos-Dist 0.587132, Neg-Dist 0.841447,
+2021-11-10 22:32:46,131 [e_ewc_sdc.py] => Task 4, Epoch 27/51 => Loss 0.006, Loss_aug 0.000111, Train_accy 79.65, Pos-Dist 0.584549, Neg-Dist 0.849162,
+2021-11-10 22:32:51,973 [e_ewc_sdc.py] => Task 4, Epoch 28/51 => Loss 0.008, Loss_aug 0.000124, Train_accy 78.28, Pos-Dist 0.584406, Neg-Dist 0.845321,
+2021-11-10 22:32:57,798 [e_ewc_sdc.py] => Task 4, Epoch 29/51 => Loss 0.009, Loss_aug 0.000135, Train_accy 77.34, Pos-Dist 0.592892, Neg-Dist 0.842540,
+2021-11-10 22:33:03,666 [e_ewc_sdc.py] => Task 4, Epoch 30/51 => Loss 0.008, Loss_aug 0.000189, Train_accy 77.70, Pos-Dist 0.584439, Neg-Dist 0.843686,
+2021-11-10 22:33:09,556 [e_ewc_sdc.py] => Task 4, Epoch 31/51 => Loss 0.008, Loss_aug 0.000153, Train_accy 76.90, Pos-Dist 0.588648, Neg-Dist 0.837617,
+2021-11-10 22:33:15,396 [e_ewc_sdc.py] => Task 4, Epoch 32/51 => Loss 0.008, Loss_aug 0.000176, Train_accy 77.13, Pos-Dist 0.586744, Neg-Dist 0.837805,
+2021-11-10 22:33:21,286 [e_ewc_sdc.py] => Task 4, Epoch 33/51 => Loss 0.008, Loss_aug 0.000204, Train_accy 78.20, Pos-Dist 0.589979, Neg-Dist 0.841717,
+2021-11-10 22:33:27,147 [e_ewc_sdc.py] => Task 4, Epoch 34/51 => Loss 0.010, Loss_aug 0.000187, Train_accy 76.63, Pos-Dist 0.596587, Neg-Dist 0.834309,
+2021-11-10 22:33:33,045 [e_ewc_sdc.py] => Task 4, Epoch 35/51 => Loss 0.008, Loss_aug 0.000146, Train_accy 78.25, Pos-Dist 0.580060, Neg-Dist 0.847715,
+2021-11-10 22:33:38,863 [e_ewc_sdc.py] => Task 4, Epoch 36/51 => Loss 0.008, Loss_aug 0.000183, Train_accy 77.75, Pos-Dist 0.589122, Neg-Dist 0.844865,
+2021-11-10 22:33:44,691 [e_ewc_sdc.py] => Task 4, Epoch 37/51 => Loss 0.007, Loss_aug 0.000187, Train_accy 77.98, Pos-Dist 0.588738, Neg-Dist 0.844320,
+2021-11-10 22:33:50,523 [e_ewc_sdc.py] => Task 4, Epoch 38/51 => Loss 0.008, Loss_aug 0.000177, Train_accy 77.73, Pos-Dist 0.590364, Neg-Dist 0.848498,
+2021-11-10 22:33:56,335 [e_ewc_sdc.py] => Task 4, Epoch 39/51 => Loss 0.008, Loss_aug 0.000215, Train_accy 77.88, Pos-Dist 0.587383, Neg-Dist 0.845093,
+2021-11-10 22:34:02,202 [e_ewc_sdc.py] => Task 4, Epoch 40/51 => Loss 0.009, Loss_aug 0.000196, Train_accy 77.56, Pos-Dist 0.588576, Neg-Dist 0.841557,
+2021-11-10 22:34:08,064 [e_ewc_sdc.py] => Task 4, Epoch 41/51 => Loss 0.008, Loss_aug 0.000212, Train_accy 77.95, Pos-Dist 0.591168, Neg-Dist 0.838686,
+2021-11-10 22:34:13,880 [e_ewc_sdc.py] => Task 4, Epoch 42/51 => Loss 0.011, Loss_aug 0.000219, Train_accy 76.19, Pos-Dist 0.599383, Neg-Dist 0.833505,
+2021-11-10 22:34:19,735 [e_ewc_sdc.py] => Task 4, Epoch 43/51 => Loss 0.009, Loss_aug 0.000198, Train_accy 77.31, Pos-Dist 0.583808, Neg-Dist 0.833376,
+2021-11-10 22:34:25,654 [e_ewc_sdc.py] => Task 4, Epoch 44/51 => Loss 0.008, Loss_aug 0.000204, Train_accy 78.04, Pos-Dist 0.590182, Neg-Dist 0.845307,
+2021-11-10 22:34:31,593 [e_ewc_sdc.py] => Task 4, Epoch 45/51 => Loss 0.008, Loss_aug 0.000231, Train_accy 78.53, Pos-Dist 0.588978, Neg-Dist 0.843137,
+2021-11-10 22:34:37,506 [e_ewc_sdc.py] => Task 4, Epoch 46/51 => Loss 0.009, Loss_aug 0.000210, Train_accy 76.92, Pos-Dist 0.594653, Neg-Dist 0.843193,
+2021-11-10 22:34:43,358 [e_ewc_sdc.py] => Task 4, Epoch 47/51 => Loss 0.007, Loss_aug 0.000217, Train_accy 79.28, Pos-Dist 0.583508, Neg-Dist 0.848296,
+2021-11-10 22:34:49,241 [e_ewc_sdc.py] => Task 4, Epoch 48/51 => Loss 0.008, Loss_aug 0.000205, Train_accy 78.46, Pos-Dist 0.588169, Neg-Dist 0.839995,
+2021-11-10 22:34:55,117 [e_ewc_sdc.py] => Task 4, Epoch 49/51 => Loss 0.009, Loss_aug 0.000190, Train_accy 77.65, Pos-Dist 0.583175, Neg-Dist 0.836756,
+2021-11-10 22:35:00,963 [e_ewc_sdc.py] => Task 4, Epoch 50/51 => Loss 0.007, Loss_aug 0.000191, Train_accy 77.98, Pos-Dist 0.587354, Neg-Dist 0.841797,
+2021-11-10 22:35:06,787 [e_ewc_sdc.py] => Task 4, Epoch 51/51 => Loss 0.009, Loss_aug 0.000287, Train_accy 75.99, Pos-Dist 0.591024, Neg-Dist 0.831601,
+2021-11-10 22:35:09,471 [e_ewc_sdc.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-10 22:35:27,053 [e_ewc_sdc.py] => Exemplar size: 1800
+2021-11-10 22:35:27,053 [trainer.py] => No CNN accuracy.
+2021-11-10 22:35:27,053 [trainer.py] => NME: {'total': 48.78, '00-09': 66.3, '10-19': 53.6, '20-29': 69.9, '30-39': 61.1, '40-49': 68.8, '50-59': 25.6, '60-69': 32.5, '70-79': 31.9, '80-89': 29.3, 'old': 51.21, 'new': 29.3}
+2021-11-10 22:35:27,053 [trainer.py] => Calibrated NME: {'total': 49.0, '00-09': 66.8, '10-19': 54.8, '20-29': 70.9, '30-39': 60.7, '40-49': 68.5, '50-59': 25.4, '60-69': 33.1, '70-79': 31.3, '80-89': 29.5, 'old': 51.44, 'new': 29.5}
+2021-11-10 22:35:27,053 [trainer.py] => Calibrated_with_memory NME: {'total': 49.09, '00-09': 66.5, '10-19': 54.8, '20-29': 70.9, '30-39': 61.2, '40-49': 68.5, '50-59': 25.8, '60-69': 33.2, '70-79': 31.4, '80-89': 29.5, 'old': 51.54, 'new': 29.5}
+2021-11-10 22:35:27,053 [trainer.py] => Calibrated_only_memory NME: {'total': 49.24, '00-09': 66.6, '10-19': 54.8, '20-29': 70.5, '30-39': 61.2, '40-49': 68.8, '50-59': 26.5, '60-69': 33.5, '70-79': 31.5, '80-89': 29.8, 'old': 51.68, 'new': 29.8}
+2021-11-10 22:35:27,053 [trainer.py] => Calibrated_corresponding_memory NME: {'total': 48.96, '00-09': 66.5, '10-19': 54.4, '20-29': 70.6, '30-39': 60.5, '40-49': 68.2, '50-59': 26.3, '60-69': 32.5, '70-79': 31.9, '80-89': 29.7, 'old': 51.36, 'new': 29.7}
+2021-11-10 22:35:27,054 [trainer.py] => NME top1 curve: [72.18, 63.23, 57.66, 52.49, 48.78]
+2021-11-10 22:35:27,054 [trainer.py] => NME top5 curve: [92.54, 87.45, 83.73, 80.28, 77.42]
+
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated NME top1 curve: [63.28, 57.73, 53.12, 49.0]
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated NME top5 curve: [87.5, 83.77, 80.54, 77.68]
+
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated_with_memory NME top1 curve: [63.23, 57.73, 53.1, 49.09]
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated_with_memory NME top5 curve: [87.52, 83.71, 80.49, 77.72]
+
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated_only_memory NME top1 curve: [63.22, 57.79, 53.04, 49.24]
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated_only_memory NME top5 curve: [87.4, 83.74, 80.56, 77.64]
+
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated_corresponding_memory NME top1 curve: [63.13, 57.6, 53.11, 48.96]
+2021-11-10 22:35:27,054 [trainer.py] => Calibrated_corresponding_memory NME top5 curve: [87.42, 83.87, 80.5, 77.62]
+
+2021-11-10 22:35:27,054 [trainer.py] => All params: 499729
+2021-11-10 22:35:27,055 [trainer.py] => Trainable params: 499729
+2021-11-10 22:35:27,055 [e_ewc_sdc.py] => Learning on 90-100
+2021-11-10 22:35:31,409 [e_ewc_sdc.py] => Task 5, Epoch 1/51 => Loss 0.010, Loss_aug 0.000002, Train_accy 76.03, Pos-Dist 0.596354, Neg-Dist 0.835744,
+2021-11-10 22:35:37,820 [e_ewc_sdc.py] => Task 5, Epoch 2/51 => Loss 0.009, Loss_aug 0.000004, Train_accy 76.56, Pos-Dist 0.595330, Neg-Dist 0.835621,
+2021-11-10 22:35:44,229 [e_ewc_sdc.py] => Task 5, Epoch 3/51 => Loss 0.010, Loss_aug 0.000007, Train_accy 76.17, Pos-Dist 0.591387, Neg-Dist 0.837802,
+2021-11-10 22:35:50,666 [e_ewc_sdc.py] => Task 5, Epoch 4/51 => Loss 0.010, Loss_aug 0.000011, Train_accy 76.30, Pos-Dist 0.597249, Neg-Dist 0.834123,
+2021-11-10 22:35:57,062 [e_ewc_sdc.py] => Task 5, Epoch 5/51 => Loss 0.009, Loss_aug 0.000017, Train_accy 76.58, Pos-Dist 0.595115, Neg-Dist 0.836747,
+2021-11-10 22:36:03,595 [e_ewc_sdc.py] => Task 5, Epoch 6/51 => Loss 0.010, Loss_aug 0.000020, Train_accy 76.30, Pos-Dist 0.587568, Neg-Dist 0.826795,
+2021-11-10 22:36:10,255 [e_ewc_sdc.py] => Task 5, Epoch 7/51 => Loss 0.007, Loss_aug 0.000028, Train_accy 78.66, Pos-Dist 0.589037, Neg-Dist 0.843969,
+2021-11-10 22:36:16,957 [e_ewc_sdc.py] => Task 5, Epoch 8/51 => Loss 0.011, Loss_aug 0.000029, Train_accy 75.05, Pos-Dist 0.596066, Neg-Dist 0.826998,
+2021-11-10 22:36:23,584 [e_ewc_sdc.py] => Task 5, Epoch 9/51 => Loss 0.008, Loss_aug 0.000041, Train_accy 77.72, Pos-Dist 0.590525, Neg-Dist 0.839461,
+2021-11-10 22:36:30,240 [e_ewc_sdc.py] => Task 5, Epoch 10/51 => Loss 0.009, Loss_aug 0.000045, Train_accy 75.88, Pos-Dist 0.594331, Neg-Dist 0.830063,
+2021-11-10 22:36:36,869 [e_ewc_sdc.py] => Task 5, Epoch 11/51 => Loss 0.008, Loss_aug 0.000047, Train_accy 77.33, Pos-Dist 0.593120, Neg-Dist 0.845394,
+2021-11-10 22:36:43,530 [e_ewc_sdc.py] => Task 5, Epoch 12/51 => Loss 0.008, Loss_aug 0.000054, Train_accy 77.25, Pos-Dist 0.590265, Neg-Dist 0.841182,
+2021-11-10 22:36:50,158 [e_ewc_sdc.py] => Task 5, Epoch 13/51 => Loss 0.010, Loss_aug 0.000059, Train_accy 75.66, Pos-Dist 0.590945, Neg-Dist 0.832460,
+2021-11-10 22:36:56,779 [e_ewc_sdc.py] => Task 5, Epoch 14/51 => Loss 0.009, Loss_aug 0.000064, Train_accy 76.62, Pos-Dist 0.596770, Neg-Dist 0.839131,
+2021-11-10 22:37:03,402 [e_ewc_sdc.py] => Task 5, Epoch 15/51 => Loss 0.007, Loss_aug 0.000089, Train_accy 78.17, Pos-Dist 0.590797, Neg-Dist 0.844941,
+2021-11-10 22:37:10,035 [e_ewc_sdc.py] => Task 5, Epoch 16/51 => Loss 0.008, Loss_aug 0.000071, Train_accy 77.81, Pos-Dist 0.588770, Neg-Dist 0.838880,
+2021-11-10 22:37:16,660 [e_ewc_sdc.py] => Task 5, Epoch 17/51 => Loss 0.010, Loss_aug 0.000089, Train_accy 75.62, Pos-Dist 0.593560, Neg-Dist 0.826999,
+2021-11-10 22:37:23,325 [e_ewc_sdc.py] => Task 5, Epoch 18/51 => Loss 0.009, Loss_aug 0.000094, Train_accy 76.77, Pos-Dist 0.591564, Neg-Dist 0.838249,
+2021-11-10 22:37:30,010 [e_ewc_sdc.py] => Task 5, Epoch 19/51 => Loss 0.010, Loss_aug 0.000103, Train_accy 75.39, Pos-Dist 0.595820, Neg-Dist 0.827045,
+2021-11-10 22:37:36,644 [e_ewc_sdc.py] => Task 5, Epoch 20/51 => Loss 0.009, Loss_aug 0.000116, Train_accy 78.00, Pos-Dist 0.593688, Neg-Dist 0.838576,
+2021-11-10 22:37:43,255 [e_ewc_sdc.py] => Task 5, Epoch 21/51 => Loss 0.008, Loss_aug 0.000105, Train_accy 78.08, Pos-Dist 0.589970, Neg-Dist 0.840644,
+2021-11-10 22:37:49,917 [e_ewc_sdc.py] => Task 5, Epoch 22/51 => Loss 0.009, Loss_aug 0.000113, Train_accy 76.36, Pos-Dist 0.593201, Neg-Dist 0.836044,
+2021-11-10 22:37:56,581 [e_ewc_sdc.py] => Task 5, Epoch 23/51 => Loss 0.008, Loss_aug 0.000140, Train_accy 78.17, Pos-Dist 0.589637, Neg-Dist 0.841431,
+2021-11-10 22:38:03,255 [e_ewc_sdc.py] => Task 5, Epoch 24/51 => Loss 0.008, Loss_aug 0.000150, Train_accy 77.11, Pos-Dist 0.587769, Neg-Dist 0.833503,
+2021-11-10 22:38:09,939 [e_ewc_sdc.py] => Task 5, Epoch 25/51 => Loss 0.009, Loss_aug 0.000139, Train_accy 76.62, Pos-Dist 0.594102, Neg-Dist 0.834417,
+2021-11-10 22:38:16,615 [e_ewc_sdc.py] => Task 5, Epoch 26/51 => Loss 0.008, Loss_aug 0.000132, Train_accy 77.66, Pos-Dist 0.585679, Neg-Dist 0.839197,
+2021-11-10 22:38:23,333 [e_ewc_sdc.py] => Task 5, Epoch 27/51 => Loss 0.007, Loss_aug 0.000130, Train_accy 78.95, Pos-Dist 0.592061, Neg-Dist 0.846234,
+2021-11-10 22:38:30,020 [e_ewc_sdc.py] => Task 5, Epoch 28/51 => Loss 0.010, Loss_aug 0.000152, Train_accy 76.23, Pos-Dist 0.591079, Neg-Dist 0.830708,
+2021-11-10 22:38:36,673 [e_ewc_sdc.py] => Task 5, Epoch 29/51 => Loss 0.009, Loss_aug 0.000163, Train_accy 78.11, Pos-Dist 0.585861, Neg-Dist 0.839504,
+2021-11-10 22:38:43,357 [e_ewc_sdc.py] => Task 5, Epoch 30/51 => Loss 0.008, Loss_aug 0.000143, Train_accy 77.25, Pos-Dist 0.592594, Neg-Dist 0.838553,
+2021-11-10 22:38:50,060 [e_ewc_sdc.py] => Task 5, Epoch 31/51 => Loss 0.010, Loss_aug 0.000197, Train_accy 76.50, Pos-Dist 0.588013, Neg-Dist 0.834863,
+2021-11-10 22:38:56,726 [e_ewc_sdc.py] => Task 5, Epoch 32/51 => Loss 0.008, Loss_aug 0.000164, Train_accy 77.56, Pos-Dist 0.593193, Neg-Dist 0.840993,
+2021-11-10 22:39:03,404 [e_ewc_sdc.py] => Task 5, Epoch 33/51 => Loss 0.007, Loss_aug 0.000205, Train_accy 78.59, Pos-Dist 0.588054, Neg-Dist 0.843748,
+2021-11-10 22:39:10,083 [e_ewc_sdc.py] => Task 5, Epoch 34/51 => Loss 0.009, Loss_aug 0.000208, Train_accy 77.11, Pos-Dist 0.588641, Neg-Dist 0.825068,
+2021-11-10 22:39:16,726 [e_ewc_sdc.py] => Task 5, Epoch 35/51 => Loss 0.009, Loss_aug 0.000222, Train_accy 76.83, Pos-Dist 0.585965, Neg-Dist 0.833534,
+2021-11-10 22:39:23,400 [e_ewc_sdc.py] => Task 5, Epoch 36/51 => Loss 0.010, Loss_aug 0.000174, Train_accy 76.44, Pos-Dist 0.590316, Neg-Dist 0.840204,
+2021-11-10 22:39:30,070 [e_ewc_sdc.py] => Task 5, Epoch 37/51 => Loss 0.010, Loss_aug 0.000194, Train_accy 76.83, Pos-Dist 0.589855, Neg-Dist 0.833863,
+2021-11-10 22:39:36,737 [e_ewc_sdc.py] => Task 5, Epoch 38/51 => Loss 0.007, Loss_aug 0.000219, Train_accy 78.34, Pos-Dist 0.590850, Neg-Dist 0.836903,
+2021-11-10 22:39:43,418 [e_ewc_sdc.py] => Task 5, Epoch 39/51 => Loss 0.009, Loss_aug 0.000224, Train_accy 76.56, Pos-Dist 0.589593, Neg-Dist 0.837429,
+2021-11-10 22:39:50,072 [e_ewc_sdc.py] => Task 5, Epoch 40/51 => Loss 0.010, Loss_aug 0.000234, Train_accy 75.86, Pos-Dist 0.590975, Neg-Dist 0.828255,
+2021-11-10 22:39:56,764 [e_ewc_sdc.py] => Task 5, Epoch 41/51 => Loss 0.010, Loss_aug 0.000195, Train_accy 76.09, Pos-Dist 0.590912, Neg-Dist 0.828632,
+2021-11-10 22:40:03,486 [e_ewc_sdc.py] => Task 5, Epoch 42/51 => Loss 0.011, Loss_aug 0.000243, Train_accy 75.98, Pos-Dist 0.590456, Neg-Dist 0.827655,
+2021-11-10 22:40:10,136 [e_ewc_sdc.py] => Task 5, Epoch 43/51 => Loss 0.007, Loss_aug 0.000216, Train_accy 77.92, Pos-Dist 0.585801, Neg-Dist 0.838058,
+2021-11-10 22:40:16,753 [e_ewc_sdc.py] => Task 5, Epoch 44/51 => Loss 0.009, Loss_aug 0.000263, Train_accy 77.22, Pos-Dist 0.592887, Neg-Dist 0.837003,
+2021-11-10 22:40:23,405 [e_ewc_sdc.py] => Task 5, Epoch 45/51 => Loss 0.010, Loss_aug 0.000243, Train_accy 76.31, Pos-Dist 0.588107, Neg-Dist 0.831704,
+2021-11-10 22:40:30,106 [e_ewc_sdc.py] => Task 5, Epoch 46/51 => Loss 0.009, Loss_aug 0.000254, Train_accy 77.23, Pos-Dist 0.587216, Neg-Dist 0.830301,
+2021-11-10 22:40:36,742 [e_ewc_sdc.py] => Task 5, Epoch 47/51 => Loss 0.009, Loss_aug 0.000213, Train_accy 77.52, Pos-Dist 0.589077, Neg-Dist 0.831937,
+2021-11-10 22:40:43,374 [e_ewc_sdc.py] => Task 5, Epoch 48/51 => Loss 0.008, Loss_aug 0.000293, Train_accy 77.80, Pos-Dist 0.586659, Neg-Dist 0.843284,
+2021-11-10 22:40:50,108 [e_ewc_sdc.py] => Task 5, Epoch 49/51 => Loss 0.010, Loss_aug 0.000204, Train_accy 75.58, Pos-Dist 0.589979, Neg-Dist 0.828212,
+2021-11-10 22:40:56,849 [e_ewc_sdc.py] => Task 5, Epoch 50/51 => Loss 0.009, Loss_aug 0.000221, Train_accy 77.11, Pos-Dist 0.587483, Neg-Dist 0.831238,
+2021-11-10 22:41:03,498 [e_ewc_sdc.py] => Task 5, Epoch 51/51 => Loss 0.011, Loss_aug 0.000245, Train_accy 75.12, Pos-Dist 0.588101, Neg-Dist 0.821361,
+2021-11-10 22:41:06,569 [e_ewc_sdc.py] => Constructing exemplars for new classes...(20 per classes)
+2021-11-10 22:41:26,019 [e_ewc_sdc.py] => Exemplar size: 2000
+2021-11-10 22:41:26,019 [trainer.py] => No CNN accuracy.
+2021-11-10 22:41:26,019 [trainer.py] => NME: {'total': 45.33, '00-09': 65.2, '10-19': 53.3, '20-29': 68.4, '30-39': 59.3, '40-49': 67.1, '50-59': 23.9, '60-69': 31.9, '70-79': 29.3, '80-89': 28.1, '90-99': 26.8, 'old': 47.39, 'new': 26.8}
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated NME: {'total': 45.89, '00-09': 65.5, '10-19': 54.7, '20-29': 69.0, '30-39': 59.7, '40-49': 67.6, '50-59': 23.8, '60-69': 32.3, '70-79': 30.2, '80-89': 29.0, '90-99': 27.1, 'old': 47.98, 'new': 27.1}
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated_with_memory NME: {'total': 45.81, '00-09': 65.5, '10-19': 54.5, '20-29': 69.3, '30-39': 59.8, '40-49': 67.3, '50-59': 23.8, '60-69': 32.3, '70-79': 30.0, '80-89': 28.7, '90-99': 26.9, 'old': 47.91, 'new': 26.9}
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated_only_memory NME: {'total': 45.84, '00-09': 65.2, '10-19': 54.6, '20-29': 69.2, '30-39': 59.4, '40-49': 68.0, '50-59': 23.9, '60-69': 32.3, '70-79': 30.0, '80-89': 28.5, '90-99': 27.3, 'old': 47.9, 'new': 27.3}
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated_corresponding_memory NME: {'total': 45.57, '00-09': 65.4, '10-19': 54.7, '20-29': 69.5, '30-39': 60.0, '40-49': 68.0, '50-59': 23.0, '60-69': 32.0, '70-79': 29.7, '80-89': 26.7, '90-99': 26.7, 'old': 47.67, 'new': 26.7}
+2021-11-10 22:41:26,019 [trainer.py] => NME top1 curve: [72.18, 63.23, 57.66, 52.49, 48.78, 45.33]
+2021-11-10 22:41:26,019 [trainer.py] => NME top5 curve: [92.54, 87.45, 83.73, 80.28, 77.42, 74.64]
+
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated NME top1 curve: [63.28, 57.73, 53.12, 49.0, 45.89]
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated NME top5 curve: [87.5, 83.77, 80.54, 77.68, 74.95]
+
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated_with_memory NME top1 curve: [63.23, 57.73, 53.1, 49.09, 45.81]
+2021-11-10 22:41:26,019 [trainer.py] => Calibrated_with_memory NME top5 curve: [87.52, 83.71, 80.49, 77.72, 74.95]
+
+2021-11-10 22:41:26,020 [trainer.py] => Calibrated_only_memory NME top1 curve: [63.22, 57.79, 53.04, 49.24, 45.84]
+2021-11-10 22:41:26,020 [trainer.py] => Calibrated_only_memory NME top5 curve: [87.4, 83.74, 80.56, 77.64, 74.82]
+
+2021-11-10 22:41:26,020 [trainer.py] => Calibrated_corresponding_memory NME top1 curve: [63.13, 57.6, 53.11, 48.96, 45.57]
+2021-11-10 22:41:26,020 [trainer.py] => Calibrated_corresponding_memory NME top5 curve: [87.42, 83.87, 80.5, 77.62, 74.63]
+

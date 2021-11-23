@@ -1,0 +1,44 @@
+2021-11-01 10:31:29,219 [trainer.py] => config: ./config.json
+2021-11-01 10:31:29,219 [trainer.py] => prefix: reproduce
+2021-11-01 10:31:29,219 [trainer.py] => dataset: cifar100
+2021-11-01 10:31:29,219 [trainer.py] => memory_size: 2000
+2021-11-01 10:31:29,219 [trainer.py] => memory_per_class: 20
+2021-11-01 10:31:29,219 [trainer.py] => fixed_memory: True
+2021-11-01 10:31:29,219 [trainer.py] => shuffle: True
+2021-11-01 10:31:29,220 [trainer.py] => init_cls: 50
+2021-11-01 10:31:29,220 [trainer.py] => increment: 10
+2021-11-01 10:31:29,220 [trainer.py] => model_name: e_ewc_sdc
+2021-11-01 10:31:29,220 [trainer.py] => convnet_type: resnet32_norm
+2021-11-01 10:31:29,220 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-01 10:31:29,220 [trainer.py] => seed: 30
+2021-11-01 10:31:29,220 [trainer.py] => tradeoff: 10000000.0
+2021-11-01 10:31:30,381 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-01 10:31:30,757 [trainer.py] => All params: 464154
+2021-11-01 10:31:30,757 [trainer.py] => Trainable params: 464154
+2021-11-01 10:31:30,757 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-01 10:31:52,719 [e_ewc_sdc.py] => Task 0, Epoch 1/70 => Loss 0.008, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.020189, Neg-Dist 0.013641,
+2021-11-01 10:32:03,536 [trainer.py] => config: ./config.json
+2021-11-01 10:32:03,536 [trainer.py] => prefix: reproduce
+2021-11-01 10:32:03,536 [trainer.py] => dataset: cifar100
+2021-11-01 10:32:03,536 [trainer.py] => memory_size: 2000
+2021-11-01 10:32:03,536 [trainer.py] => memory_per_class: 20
+2021-11-01 10:32:03,536 [trainer.py] => fixed_memory: True
+2021-11-01 10:32:03,536 [trainer.py] => shuffle: True
+2021-11-01 10:32:03,536 [trainer.py] => init_cls: 50
+2021-11-01 10:32:03,536 [trainer.py] => increment: 10
+2021-11-01 10:32:03,536 [trainer.py] => model_name: e_ewc_sdc
+2021-11-01 10:32:03,536 [trainer.py] => convnet_type: resnet32_norm
+2021-11-01 10:32:03,536 [trainer.py] => device: [device(type='cuda', index=0)]
+2021-11-01 10:32:03,537 [trainer.py] => seed: 30
+2021-11-01 10:32:03,537 [trainer.py] => tradeoff: 10000000.0
+2021-11-01 10:32:04,682 [data_manager.py] => [20, 91, 34, 52, 8, 74, 21, 88, 80, 89, 82, 38, 0, 77, 42, 67, 68, 92, 48, 10, 93, 4, 51, 72, 1, 87, 78, 24, 71, 54, 95, 32, 63, 69, 29, 30, 19, 60, 59, 43, 26, 5, 25, 83, 22, 36, 66, 47, 86, 9, 39, 56, 98, 44, 73, 31, 70, 40, 57, 14, 75, 58, 85, 28, 55, 33, 50, 13, 94, 15, 11, 79, 64, 84, 90, 27, 62, 6, 16, 76, 81, 18, 35, 61, 96, 49, 65, 7, 41, 3, 46, 17, 53, 2, 23, 12, 97, 45, 99, 37]
+2021-11-01 10:32:05,046 [trainer.py] => All params: 464154
+2021-11-01 10:32:05,047 [trainer.py] => Trainable params: 464154
+2021-11-01 10:32:05,047 [e_ewc_sdc.py] => Learning on 0-50
+2021-11-01 10:32:26,295 [e_ewc_sdc.py] => Task 0, Epoch 1/70 => Loss 0.008, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.020189, Neg-Dist 0.013641,
+2021-11-01 10:32:46,258 [e_ewc_sdc.py] => Task 0, Epoch 2/70 => Loss 0.001, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.002798, Neg-Dist 0.002213,
+2021-11-01 10:33:06,524 [e_ewc_sdc.py] => Task 0, Epoch 3/70 => Loss 0.001, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.002130, Neg-Dist 0.001705,
+2021-11-01 10:33:27,448 [e_ewc_sdc.py] => Task 0, Epoch 4/70 => Loss 0.001, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.001993, Neg-Dist 0.001596,
+2021-11-01 10:33:47,497 [e_ewc_sdc.py] => Task 0, Epoch 5/70 => Loss 0.001, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.002024, Neg-Dist 0.001622,
+2021-11-01 10:34:08,260 [e_ewc_sdc.py] => Task 0, Epoch 6/70 => Loss 0.001, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.002002, Neg-Dist 0.001599,
+2021-11-01 10:34:29,036 [e_ewc_sdc.py] => Task 0, Epoch 7/70 => Loss 0.001, Loss_aug 0.000000, Train_accy 0.06, Pos-Dist 0.001976, Neg-Dist 0.001565,

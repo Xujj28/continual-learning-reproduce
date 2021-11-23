@@ -1,5 +1,7 @@
 import json
 import argparse
+import warnings
+warnings.filterwarnings("ignore")
 from trainer import train
 
 

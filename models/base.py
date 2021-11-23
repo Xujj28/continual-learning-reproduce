@@ -26,6 +26,7 @@ class BaseLearner(object):
         self._fixed_memory = args['fixed_memory']
         self._device = args['device'][0]
         self._multiple_gpus = args['device']
+        
 
     @property
     def exemplar_size(self):
@@ -128,6 +129,7 @@ class BaseLearner(object):
     def _eval_nme(self, loader, class_means):
         self._network.eval()
         vectors, y_true = self._extract_vectors(loader)
+
         vectors = (vectors.T / (np.linalg.norm(vectors.T, axis=0) + EPSILON)).T
 
         dists = cdist(class_means, vectors, 'sqeuclidean')  # [nb_classes, N]
@@ -218,6 +220,7 @@ class BaseLearner(object):
     def _construct_exemplar_unified(self, data_manager, m):
         logging.info('Constructing exemplars for new classes...({} per classes)'.format(m))
         _class_means = np.zeros((self._total_classes, self.feature_dim))
+        print(self.feature_dim)
 
         # Calculate the means of old classes with newly trained network
         for class_idx in range(self._known_classes):
@@ -276,4 +279,5 @@ class BaseLearner(object):
 
             _class_means[class_idx, :] = mean
 
+        # the type of self._class_means is ndarray
         self._class_means = _class_means

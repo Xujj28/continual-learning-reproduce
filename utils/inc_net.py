@@ -1,19 +1,24 @@
 import copy
 import torch
 from torch import nn
-from convs.cifar_resnet import resnet32
+from convs.cifar_resnet import resnet32, resnet32_norm
 from convs.resnet import resnet18, resnet34, resnet50
 from convs.ucir_cifar_resnet import resnet32 as cosine_resnet32
 from convs.ucir_resnet import resnet18 as cosine_resnet18
 from convs.ucir_resnet import resnet34 as cosine_resnet34
 from convs.ucir_resnet import resnet50 as cosine_resnet50
 from convs.linears import SimpleLinear, SplitCosineLinear, CosineLinear
+from convs.sdc_cifar_resnet import sdc_resnet32_norm
 
 
 def get_convnet(convnet_type, pretrained=False):
     name = convnet_type.lower()
     if name == 'resnet32':
         return resnet32()
+    elif name == "resnet32_norm":
+        return resnet32_norm()
+    elif name == "sdc_resnet32_norm":
+        return sdc_resnet32_norm(pretrained=pretrained)
     elif name == 'resnet18':
         return resnet18(pretrained=pretrained)
     elif name == 'resnet34':
@@ -106,8 +111,11 @@ class IncrementalNet(BaseNet):
 
     def forward(self, x):
         x = self.convnet(x)
-        out = self.fc(x['features'])
-        out.update(x)
+        if self.fc is not None:
+            out = self.fc(x['features'])
+            out.update(x)
+        else:
+            out = x['features']
         if hasattr(self, 'gradcam') and self.gradcam:
             out['gradcam_gradients'] = self._gradcam_gradients
             out['gradcam_activations'] = self._gradcam_activations
