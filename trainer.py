@@ -1,6 +1,7 @@
 import logging
 import copy
 import torch
+import os
 torch.multiprocessing.set_sharing_strategy('file_system')
 from utils import factory
 from utils.data_manager import DataManager
@@ -21,9 +22,9 @@ def _train(args):
     _set_device(args)
     print_args(args)
     if args['dataset'] == "imagenet_inverse":
-        train_dir = "/data/Datasets/miniImageNet/train/"
-        test_dir = "/data/Datasets/miniImageNet/test/"
-        train_inverse_dir = "/data/results/fv/miniImageNet/miniImageNet_inverse_fv_bn_clip/train/"
+        train_dir = os.path.join(os.environ["MINIIMAGENETDATASET"], "train")
+        test_dir = os.path.join(os.environ["MINIIMAGENETDATASET"], "val")
+        train_inverse_dir = os.path.join(os.environ["INVERSERESULT"], "fv/miniImageNet/miniImageNet_inverse_fv_bn_clip/train")
         data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'], train_dir, test_dir, train_inverse_dir)
     else:
         data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'])

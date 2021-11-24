@@ -52,8 +52,8 @@ class iCIFAR100(iData):
     class_order = np.arange(100).tolist()
 
     def download_data(self):
-        train_dataset = datasets.cifar.CIFAR100('/data/Datasets/cifar100', train=True, download=True)
-        test_dataset = datasets.cifar.CIFAR100('/data/Datasets/cifar100', train=False, download=True)
+        train_dataset = datasets.cifar.CIFAR100(os.environ["CIFARDATASET"], train=True, download=True)
+        test_dataset = datasets.cifar.CIFAR100(os.environ["CIFARDATASET"], train=False, download=True)
         self.train_data, self.train_targets = train_dataset.data, np.array(train_dataset.targets)
         print(self.train_data.shape)
         self.test_data, self.test_targets = test_dataset.data, np.array(test_dataset.targets)
@@ -78,8 +78,8 @@ class iImageNet1000(iData):
     class_order = np.arange(1000).tolist()
 
     def download_data(self):
-        train_dir = '/data15/Public/Datasets/ilsvrc2012/train/'
-        test_dir = '/data15/Public/Datasets/ilsvrc2012/val/'
+        train_dir = os.path.join(os.environ["IMAGENETDATASET"], "train")
+        test_dir = os.path.join(os.environ["IMAGENETDATASET"], "val")
 
         train_dset = datasets.ImageFolder(train_dir)
         test_dset = datasets.ImageFolder(test_dir)

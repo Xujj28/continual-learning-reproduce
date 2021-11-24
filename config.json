@@ -10,6 +10,6 @@
     "model_name": "icarl",
     "convnet_type": "resnet32",
     "device": ["0"],
-    "seed": [1993, 60, 40, 50, 100, 32],
+    "seed": [60, 40, 50, 100, 32],
     "pretrained": true
 }
