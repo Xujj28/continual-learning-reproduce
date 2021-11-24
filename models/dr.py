@@ -29,6 +29,10 @@ T2 = 2
 weight_decay = 1e-5
 num_workers = 4
 
+hyperparameters = ["epochs_expert", "lrate_expert", "milestones_expert", "lrate_decay_expert", 
+                   "epochs", "lrate", "milestones", "lrate_decay", "batch_size", "T1", "T2",
+                   "weight_decay", "num_workers"]
+
 
 class DR(BaseLearner):
     def __init__(self, args):
@@ -43,11 +47,21 @@ class DR(BaseLearner):
         self._known_classes = self._total_classes
         logging.info('Exemplar size: {}'.format(self.exemplar_size))
 
+    def _log_hyperparameters(self):
+            logging.info(50*"-")
+            logging.info("log_hyperparameters")
+            logging.info(50*"-")
+            for item in hyperparameters:
+                logging.info('{}: {}'.format(item, eval(item)))
+
     def incremental_train(self, data_manager):
         self._cur_task += 1
         self.task_size = data_manager.get_task_size(self._cur_task)
         self._total_classes = self._known_classes + self.task_size
         self._network.update_fc(self._total_classes)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
         # Loader

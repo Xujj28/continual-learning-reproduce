@@ -25,6 +25,9 @@ attention_ratio = 0.1
 weight_decay = 1e-5
 num_workers = 4
 
+hyperparameters = ["epochs", "lrate", "milestones", "lrate_decay", "batch_size", "memory_size", 
+                   "distill_ratio", "attention_ratio", "weight_decay", "num_workers"]
+
 
 class LwM(BaseLearner):
 
@@ -41,11 +44,21 @@ class LwM(BaseLearner):
 
         self._known_classes = self._total_classes
         logging.info('Exemplar size: {}'.format(self.exemplar_size))
+    
+    def _log_hyperparameters(self):
+        logging.info(50*"-")
+        logging.info("log_hyperparameters")
+        logging.info(50*"-")
+        for item in hyperparameters:
+            logging.info('{}: {}'.format(item, eval(item)))
 
     def incremental_train(self, data_manager):
         self._cur_task += 1
         self._total_classes = self._known_classes + data_manager.get_task_size(self._cur_task)
         self._network.update_fc(self._total_classes)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
         # Loader

@@ -34,6 +34,10 @@ T = 2
 weight_decay = 1e-3
 num_workers = 4
 
+hyperparameters = ["epochs_init", "lrate_init", "milestones_init", "epochs", "lrate", "milestones", 
+                   "epochs_finetune", "lrate_finetune", "milestones_finetune", "lrate_decay", "batch_size", "T", 
+                   "weight_decay", "num_workers"]
+
 
 class End2End(BaseLearner):
 
@@ -46,6 +50,13 @@ class End2End(BaseLearner):
         self._old_network = self._network.copy().freeze()
         self._known_classes = self._total_classes
         logging.info('Exemplar size: {}'.format(self.exemplar_size))
+    
+    def _log_hyperparameters(self):
+        logging.info(50*"-")
+        logging.info("log_hyperparameters")
+        logging.info(50*"-")
+        for item in hyperparameters:
+            logging.info('{}: {}'.format(item, eval(item)))
 
     def incremental_train(self, data_manager):
         self._cur_task += 1
@@ -53,6 +64,9 @@ class End2End(BaseLearner):
         self._total_classes = self._known_classes + self.task_size
         self._network.update_fc(self._total_classes)
         self._seen_classes.append(self.task_size)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
         # Loader

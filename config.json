@@ -1,15 +1,15 @@
 {
     "prefix": "reproduce",
-    "dataset": "imagenet_inverse",
+    "dataset": "cifar100",
     "memory_size": 2000,
     "memory_per_class": 20,
-    "fixed_memory": true,
+    "fixed_memory": false,
     "shuffle": true,
-    "init_cls": 50,
-    "increment": 5,
-    "model_name": "E_MAS_SDC",
-    "convnet_type": "sdc_resnet32_norm",
+    "init_cls": 10,
+    "increment": 10,
+    "model_name": "icarl",
+    "convnet_type": "resnet32",
     "device": ["0"],
-    "seed": [1993],
+    "seed": [1993, 60, 40, 50, 100, 32],
     "pretrained": true
 }

@@ -31,7 +31,8 @@ split_ratio = 0.1
 T = 2
 weight_decay = 2e-4
 num_workers = 4
-
+hyperparameters = ["epochs", "lrate", "milestones", "lrate_decay", "batch_size", "split_ratio", "T",
+                   "weight_decay", "num_workers"]
 
 class BiC(BaseLearner):
     def __init__(self, args):
@@ -45,10 +46,20 @@ class BiC(BaseLearner):
         self._known_classes = self._total_classes
         logging.info('Exemplar size: {}'.format(self.exemplar_size))
 
+    def _log_hyperparameters(self):
+        logging.info(50*"-")
+        logging.info("log_hyperparameters")
+        logging.info(50*"-")
+        for item in hyperparameters:
+            logging.info('{}: {}'.format(item, eval(item)))
+
     def incremental_train(self, data_manager):
         self._cur_task += 1
         self._total_classes = self._known_classes + data_manager.get_task_size(self._cur_task)
         self._network.update_fc(self._total_classes)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
         # Loader

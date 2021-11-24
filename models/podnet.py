@@ -21,6 +21,9 @@ nb_proxy = 10
 weight_decay = 5e-4
 num_workers = 4
 
+hyperparameters = ["epochs", "lrate", "ft_epochs", "ft_lrate", "batch_size", "lambda_c_base", 
+                   "lambda_f_base", "nb_proxy", "weight_decay", "num_workers"]
+
 '''
 Distillation losses: POD-flat (lambda_f=1) + POD-spatial (lambda_c=5)
 NME results are shown.
@@ -62,12 +65,22 @@ class PODNet(BaseLearner):
         self._old_network = self._network.copy().freeze()
         self._known_classes = self._total_classes
         logging.info('Exemplar size: {}'.format(self.exemplar_size))
+    
+    def _log_hyperparameters(self):
+        logging.info(50*"-")
+        logging.info("log_hyperparameters")
+        logging.info(50*"-")
+        for item in hyperparameters:
+            logging.info('{}: {}'.format(item, eval(item)))
 
     def incremental_train(self, data_manager):
         self._cur_task += 1
         self._total_classes = self._known_classes + data_manager.get_task_size(self._cur_task)
         self.task_size = self._total_classes - self._known_classes
         self._network.update_fc(self._total_classes, self._cur_task)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
         # Loader

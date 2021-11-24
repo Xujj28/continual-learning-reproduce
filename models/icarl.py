@@ -24,13 +24,15 @@ num_workers = 16
 '''
 
 # CIFAR100, ResNet32
-epochs = 2
+epochs = 70
+lrate_init = 2e-1
 lrate = 2.0
 milestones = [49, 63]
 lrate_decay = 0.2
 batch_size = 128
-weight_decay = 5e-5
+weight_decay = 1e-5
 num_workers = 4
+hyperparameters = ["epochs", "lrate_init", "lrate", "milestones", "lrate_decay", "batch_size", "weight_decay", "num_workers"]
 
 
 class iCaRL(BaseLearner):
@@ -44,10 +46,21 @@ class iCaRL(BaseLearner):
         self._known_classes = self._total_classes
         logging.info('Exemplar size: {}'.format(self.exemplar_size))
 
+    def _log_hyperparameters(self):
+        logging.info(50*"-")
+        logging.info("log_hyperparameters")
+        logging.info(50*"-")
+        for item in hyperparameters:
+            logging.info('{}: {}'.format(item, eval(item)))
+
     def incremental_train(self, data_manager):
         self._cur_task += 1
         self._total_classes = self._known_classes + data_manager.get_task_size(self._cur_task)
         self._network.update_fc(self._total_classes)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
+        
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
         # Loader
@@ -69,7 +82,12 @@ class iCaRL(BaseLearner):
         self._network.to(self._device)
         if self._old_network is not None:
             self._old_network.to(self._device)
-        optimizer = optim.SGD(self._network.parameters(), lr=lrate, momentum=0.9, weight_decay=weight_decay)  # 1e-5
+        
+        if self._cur_task == 0:
+            optimizer = optim.SGD(self._network.parameters(), lr=lrate_init, momentum=0.9, weight_decay=weight_decay)  # 1e-5
+            # optimizer = optim.Adam(self._network.parameters(), lr=lrate, weight_decay=weight_decay)
+        else:
+            optimizer = optim.SGD(self._network.parameters(), lr=lrate, momentum=0.9, weight_decay=weight_decay)  # 1e-5
         scheduler = optim.lr_scheduler.MultiStepLR(optimizer=optimizer, milestones=milestones, gamma=lrate_decay)
         self._update_representation(train_loader, test_loader, optimizer, scheduler)
 

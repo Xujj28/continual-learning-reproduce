@@ -38,21 +38,15 @@ class iCIFAR10(iData):
 
 class iCIFAR100(iData):
     use_path = False
-    # train_trsf = [
-    #     transforms.RandomCrop(32, padding=4),
-    #     transforms.RandomHorizontalFlip(),
-    #     transforms.ColorJitter(brightness=63/255)
-    # ]
     train_trsf = [
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
+        transforms.ColorJitter(brightness=63/255)
     ]
     test_trsf = []
     common_trsf = [
         transforms.ToTensor(),
-        # transforms.Normalize(mean=(0.5071, 0.4867, 0.4408), std=(0.2675, 0.2565, 0.2761)),
-        transforms.Normalize((0.4914, 0.4822, 0.4465),
-                                 (0.2023, 0.1994, 0.2010)),
+        transforms.Normalize(mean=(0.5071, 0.4867, 0.4408), std=(0.2675, 0.2565, 0.2761)),
     ]
 
     class_order = np.arange(100).tolist()
