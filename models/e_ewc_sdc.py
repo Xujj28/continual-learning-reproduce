@@ -37,22 +37,38 @@ lrate_decay = 0.2
 batch_size = 16
 weight_decay = 2e-4
 num_workers = 4
+tradeoff = 1e7
+num_instances = 8
+sigma = 0.2
+criterion_type = "tripletloss_no_hardmining"
+no_replay = True
 
+# dataset_info = {
+#     train_dir : "/data/Datasets/miniImageNet/train/",
+#     test_dir : "/data/Datasets/miniImageNet/test/",
+#     train_inverse_dir : "/data/results/fv/miniImageNet/miniImageNet_inverse_fv_bn_clip/train/"
+# }
+
+hyperparameters = ["epochs", "lrate", "milestones", "lrate_decay", "batch_size", "weight_decay", "num_workers", 
+                    "tradeoff", "num_instances", "sigma", "criterion_type", "no_replay"]
 
 class E_EWC_SDC(BaseLearner):
 
     def __init__(self, args):
         super().__init__(args)
         self._network = IncrementalNet(args['convnet_type'], args["pretrained"])
-        self._tradeoff = args['tradeoff']
-        self._num_instances = args['num_instances']
         self._fisher = {}
-        self._sigma = args['sigma']
-        self._criterion_type = args["loss"]
         self._init_cls = args['init_cls']
         self._increment = args['increment']
-        self._no_replay = args['no_replay']
         self._model_name = args["model_name"]
+    
+    def _log_hyperparameters(self):
+        logging.info(50*"-")
+        logging.info("log_hyperparameters")
+        logging.info(50*"-")
+        for item in hyperparameters:
+            logging.info('{}: {}'.format(item, eval(item)))
+        
     
     def build_rehearsal_memory(self, data_manager, per_class):
         print("my own build_rehearsal_memory")
@@ -118,17 +134,22 @@ class E_EWC_SDC(BaseLearner):
     def incremental_train(self, data_manager):
         self._cur_task += 1
         self._total_classes = self._known_classes + data_manager.get_task_size(self._cur_task)
+
+        if self._cur_task == 0:
+            self._log_hyperparameters()
+            logging.info('train_dir: {}'.format(data_manager._train_dir))
+            logging.info('test_dir: {}'.format(data_manager._test_dir))
+            logging.info('train_inverse_dir: {}'.format(data_manager._train_inverse_dir))
         
         logging.info('Learning on {}-{}'.format(self._known_classes, self._total_classes))
 
-        if self._no_replay:
+        if no_replay:
             train_dataset = data_manager.get_dataset(np.arange(self._known_classes, self._total_classes), source='train', mode='train')
         else:
             train_dataset = data_manager.get_dataset(np.arange(self._known_classes, self._total_classes), 
                                                     source='train', mode='train', appendent=self._get_memory())
         self.train_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=RandomIdentitySampler(
-                train_dataset, num_instances=self._num_instances), drop_last=True, num_workers=num_workers)
-        # self.train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=num_workers)
+                train_dataset, num_instances=num_instances), drop_last=True, num_workers=num_workers)
         
         test_dataset = data_manager.get_dataset(np.arange(0, self._total_classes), source='test', mode='test')
         self.test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=num_workers)
@@ -185,13 +206,13 @@ class E_EWC_SDC(BaseLearner):
                 else:
                     loss_aug = 0
                     for (name, param), (_, param_old) in zip(self._network.named_parameters(), self._old_network.named_parameters()):
-                        loss_aug += self._tradeoff * \
+                        loss_aug += tradeoff * \
                             torch.sum(self._fisher[name]*(param_old-param).pow(2))/2.
                 
-                if self._criterion_type == "tripletloss":
-                    criterion = TripletLoss(num_instances=self._num_instances)
+                if criterion_type == "tripletloss":
+                    criterion = TripletLoss(num_instances=num_instances)
                 else:
-                    criterion = TripletLossNoHardMining(num_instances=self._num_instances)
+                    criterion = TripletLossNoHardMining(num_instances=num_instances)
                 loss, inter_, dist_ap, dist_an = criterion(embed_feat, targets)
                 loss += loss_aug
 
@@ -208,7 +229,7 @@ class E_EWC_SDC(BaseLearner):
                 total += len(targets)
 
             scheduler.step()
-            train_acc = np.around(tensor2numpy(correct)*100 / (total * self._num_instances), decimals=2)
+            train_acc = np.around(tensor2numpy(correct)*100 / (total * num_instances), decimals=2)
            
             info = 'Task {}, Epoch {}/{} => Loss {:.3f}, Loss_aug {:.6f}, Train_accy {:.2f}, Pos-Dist {:.6f}, Neg-Dist {:.6f},'.format(
                 self._cur_task, epoch+1, epochs, losses/len(train_loader), losses_aug/len(train_loader), train_acc, dists_ap/len(train_loader), dists_an/len(train_loader))
@@ -312,14 +333,14 @@ class E_EWC_SDC(BaseLearner):
             MU_corresponding_memory[:self._known_classes] = self._calibrated_class_means_corresponding_memory
 
         gap = self._displacement(train_embeddings_cl_old,
-                           train_embeddings_cl, MU[:self._known_classes], self._sigma)
+                           train_embeddings_cl, MU[:self._known_classes], sigma)
         
         gap_with_memory = self._displacement(np.concatenate((train_embeddings_cl_old, train_memory_embeddings_cl_old), axis=0),
-                           np.concatenate((train_embeddings_cl, train_memory_embeddings_cl), axis=0), MU_with_memory[:self._known_classes], self._sigma)
+                           np.concatenate((train_embeddings_cl, train_memory_embeddings_cl), axis=0), MU_with_memory[:self._known_classes], sigma)
 
-        gap_only_memory = self._displacement(train_memory_embeddings_cl_old, train_memory_embeddings_cl, MU_only_memory[:self._known_classes], self._sigma)
+        gap_only_memory = self._displacement(train_memory_embeddings_cl_old, train_memory_embeddings_cl, MU_only_memory[:self._known_classes], sigma)
 
-        gap_corresponding_memory = self._displacement_corresponding_memory(train_memory_embeddings_cl_old, train_memory_embeddings_cl, MU_corresponding_memory[:self._known_classes], self._sigma)
+        gap_corresponding_memory = self._displacement_corresponding_memory(train_memory_embeddings_cl_old, train_memory_embeddings_cl, MU_corresponding_memory[:self._known_classes], sigma)
 
 
         MU[:self._known_classes] += gap

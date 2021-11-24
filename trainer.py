@@ -1,13 +1,10 @@
-import sys
 import logging
 import copy
 import torch
-#训练python脚本中import torch后，加上下面这句。 
 torch.multiprocessing.set_sharing_strategy('file_system')
 from utils import factory
 from utils.data_manager import DataManager
 from utils.toolkit import count_parameters
-
 
 def train(args):
     seed_list = copy.deepcopy(args['seed'])
@@ -20,22 +17,14 @@ def train(args):
 
 
 def _train(args):
-    logfilename = '{}_{}_{}_{}_{}_{}_{}'.format(args['prefix'], args['seed'], args['model_name'], args['convnet_type'],
-                                                args['dataset'], args['init_cls'], args['increment'])
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s [%(filename)s] => %(message)s',
-        handlers=[
-            logging.FileHandler(filename=logfilename + '.log'),
-            logging.StreamHandler(sys.stdout)
-        ]
-    )
-
     _set_random()
     _set_device(args)
     print_args(args)
     if args['dataset'] == "imagenet_inverse":
-        data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'], args['train_dir'], args['train_dir'], args['train_dir'])
+        train_dir = "/data/Datasets/miniImageNet/train/"
+        test_dir = "/data/Datasets/miniImageNet/test/"
+        train_inverse_dir = "/data/results/fv/miniImageNet/miniImageNet_inverse_fv_bn_clip/train/"
+        data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'], train_dir, test_dir, train_inverse_dir)
     else:
         data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'])
     model = factory.get_model(args['model_name'], args)
