@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 from models.base import BaseLearner
 from utils.inc_net import IncrementalNet
 from utils.toolkit import target2onehot, tensor2numpy
+from torch.utils.tensorboard import SummaryWriter  
 
 EPSILON = 1e-8
 
@@ -24,7 +25,7 @@ num_workers = 16
 '''
 
 # CIFAR100, ResNet32
-epochs = 70
+epochs = 100
 lrate_init = 2.0
 lrate = 2.0
 milestones = [49, 63]
@@ -40,6 +41,9 @@ class iCaRL(BaseLearner):
     def __init__(self, args):
         super().__init__(args)
         self._network = IncrementalNet(args['convnet_type'], False)
+        logpath = "runs/{}/base_{}/incre_{}/{}/seed_{}".format(args['dataset'], args['init_cls'], 
+                    args['increment'], args['model_name'], args['seed'])
+        self._writer = SummaryWriter(logpath)
 
     def after_task(self):
         self._old_network = self._network.copy().freeze()
@@ -127,5 +131,9 @@ class iCaRL(BaseLearner):
             info = 'Task {}, Epoch {}/{} => Loss {:.3f}, Train_accy {:.2f}, Test_accy {:.2f}'.format(
                 self._cur_task, epoch+1, epochs, losses/len(train_loader), train_acc, test_acc)
             prog_bar.set_description(info)
+
+            self._writer.add_scalar("task_{}/Acc/train".format(self._cur_task), train_acc, global_step=epoch+1)
+            self._writer.add_scalar("task_{}/Acc/test".format(self._cur_task), test_acc, global_step=epoch+1)
+            self._writer.add_scalar("task_{}/Loss/train".format(self._cur_task), losses/len(train_loader), global_step=epoch+1)
 
         logging.info(info)
