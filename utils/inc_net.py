@@ -1,7 +1,7 @@
 import copy
 import torch
 from torch import nn
-from convs.cifar_resnet import resnet32, resnet32_norm
+from convs.cifar_resnet import resnet32
 from convs.resnet import resnet18, resnet34, resnet50
 from convs.ucir_cifar_resnet import resnet32 as cosine_resnet32
 from convs.ucir_resnet import resnet18 as cosine_resnet18
@@ -15,8 +15,8 @@ def get_convnet(convnet_type, pretrained=False):
     name = convnet_type.lower()
     if name == 'resnet32':
         return resnet32()
-    elif name == "resnet32_norm":
-        return resnet32_norm()
+    # elif name == "resnet32_norm":
+    #     return resnet32_norm()
     elif name == "sdc_resnet32_norm":
         return sdc_resnet32_norm(pretrained=pretrained)
     elif name == 'resnet18':

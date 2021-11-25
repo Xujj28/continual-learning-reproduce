@@ -25,7 +25,7 @@ num_workers = 16
 
 # CIFAR100, ResNet32
 epochs = 70
-lrate_init = 2e-1
+lrate_init = 2.0
 lrate = 2.0
 milestones = [49, 63]
 lrate_decay = 0.2
