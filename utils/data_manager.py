@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
-from utils.data import iCIFAR10, iCIFAR100, iImageNet1000, iImageNet100_inverse
+from utils.data import iCIFAR10, iCIFAR100, iImageNet1000, iImageNet100_inverse, iCIFAR100_inverse
 
 
 class DataManager(object):
@@ -186,6 +186,8 @@ def _get_idata(dataset_name):
         return iImageNet1000()
     elif name == 'imagenet_inverse':
         return iImageNet100_inverse()
+    elif name == "cifar100_inverse":
+        return iCIFAR100_inverse()
     else:
         raise NotImplementedError('Unknown dataset {}.'.format(dataset_name))
 

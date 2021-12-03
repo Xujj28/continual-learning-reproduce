@@ -26,6 +26,12 @@ def _train(args):
         test_dir = os.path.join(os.environ["MINIIMAGENETDATASET"], "val")
         train_inverse_dir = os.path.join(os.environ["INVERSERESULT"], "fv/miniImageNet/miniImageNet_inverse_fv_bn_clip/train")
         data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'], train_dir, test_dir, train_inverse_dir)
+    elif args['dataset'] == "cifar100_inverse":
+        data_root = "/home/20/junjie/results/cifar100_png"
+        train_dir = os.path.join(data_root, "train")
+        test_dir = os.path.join(data_root, "test")
+        train_inverse_dir = "/home/20/zhengjin/Storage/public/fake_data/fv/cifar100_v1/trainval"
+        data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'], train_dir, test_dir, train_inverse_dir)
     else:
         data_manager = DataManager(args['dataset'], args['shuffle'], args['seed'], args['init_cls'], args['increment'])
     model = factory.get_model(args['model_name'], args)

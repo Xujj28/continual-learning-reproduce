@@ -116,6 +116,31 @@ class iImageNet100_inverse(iData):
         self.train_inverse_data, self.train_inverse_targets = split_images_labels(train_inverse_dset.imgs)
 
 
+class iCIFAR100_inverse(iData):
+    use_path = True
+    train_trsf = [
+        transforms.RandomCrop(32, padding=4),
+        transforms.RandomHorizontalFlip(),
+        transforms.ColorJitter(brightness=63/255)
+    ]
+    test_trsf = []
+    common_trsf = [
+        transforms.ToTensor(),
+        transforms.Normalize(mean=(0.5071, 0.4867, 0.4408), std=(0.2675, 0.2565, 0.2761)),
+    ]
+
+    class_order = np.arange(100).tolist()
+
+    def download_data(self, train_dir, test_dir, inverse_dir):
+        train_dset = datasets.ImageFolder(train_dir)
+        test_dset = datasets.ImageFolder(test_dir)
+        train_inverse_dset = datasets.ImageFolder(inverse_dir)
+
+        self.train_data, self.train_targets = split_images_labels(train_dset.imgs)
+        self.test_data, self.test_targets = split_images_labels(test_dset.imgs)
+        self.train_inverse_data, self.train_inverse_targets = split_images_labels(train_inverse_dset.imgs)
+
+
 if __name__ == "__main__":
     # train_dir = '/data/results/fv/miniImageNet/miniImageNet_inverse_fv_bn_clip/train/'
     # train_dset = datasets.ImageFolder(train_dir)

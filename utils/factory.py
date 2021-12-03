@@ -6,6 +6,7 @@ from models.bic import BiC
 from models.lwm import LwM
 from models.podnet import PODNet
 from models.e_ewc_sdc import E_EWC_SDC
+from models.icarl_contrastive import iCaRL_Contrastive
 
 
 def get_model(model_name, args):
@@ -28,3 +29,5 @@ def get_model(model_name, args):
         return E_EWC_SDC(args)
     elif name == 'e_mas_sdc':
         return E_EWC_SDC(args)
+    elif name == 'icarl_contrastive':
+        return iCaRL_Contrastive(args)
